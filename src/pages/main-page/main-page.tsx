@@ -1,12 +1,13 @@
 import { Layout } from 'antd';
 import React from 'react';
 
-import Header from '@components/header/Header';
-import SiderBar from '@components/sider/Sider';
+import HeaderBox from '@components/header/HeaderBox';
+import SiderBar from '@components/sider/SiderBar';
 import { Content } from 'antd/lib/layout/layout';
 import { Footer } from 'antd/lib/layout/layout';
 
-
+import { Header } from 'antd/lib/layout/layout';
+const {Sider} = Layout;
 import './main-page.css';
 
  const MainPage: React.FC = () => {
@@ -14,10 +15,10 @@ import './main-page.css';
     return (
         <>
         <Layout>
-        <SiderBar>Sider</SiderBar>
+        <Sider><SiderBar/> </Sider>
         <Layout>
-          <Header></Header>
-          <Content>Content</Content>
+          <Header><HeaderBox/></Header>
+          <Content/>
           <Footer>Footer</Footer>
         </Layout>
       </Layout>

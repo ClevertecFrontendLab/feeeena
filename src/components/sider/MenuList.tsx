@@ -14,22 +14,22 @@ const MenuList: React.FC = () => {
         items={[
           {
             key: '1',
-            icon: <CalendarTwoTone />,
+            icon: <CalendarTwoTone className="menu-icon"/>,
             label: 'Календарь',
           },
           {
             key: '2',
-            icon: <HeartFilled />,
+            icon: <HeartFilled className="menu-icon"/>,
             label: 'Тренировки',
           },
           {
             key: '3',
-            icon: <TrophyFilled />,
+            icon: <TrophyFilled className="menu-icon"/>,
             label: 'Достижения',
           },
           {
             key: '4',
-            icon: <IdcardOutlined />,
+            icon: <IdcardOutlined className="menu-icon"/>,
             label: 'Профиль',
           },
         ]}
