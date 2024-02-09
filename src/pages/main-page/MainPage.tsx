@@ -17,16 +17,16 @@ import FooterBox from '@components/footer/FooterBox';
     return (
       <div className="main-page">
         <Layout style={{ minHeight: '100vh' }}>
-      <Sider >
+      <Sider className="sider-bar" style={{ zIndex: 1 }}>
         <SiderBar/>
         </Sider>
         <Layout >
 
-          <Header  style={{ padding: 0 }}>
+          <Header style={{ zIndex: 2 }} className='header-content'>
             <HeaderBox />
             </Header>
 
-          <Content>
+          <Content >
             <ContentActions/>
             <ContentWrap/>
             <ContentCards/>

@@ -6,13 +6,16 @@ import {CalendarTwoTone,
   IdcardOutlined} from '@ant-design/icons';
 import "./sider.css";
 import Exit from './Exit';
+interface MenuListProps {
+  className?: string; 
+}
 
-const MenuList: React.FC = () => {
+
+const MenuList: React.FC<MenuListProps> = ({className}) => {
     return (
-        <Menu
-        theme="light"
+        <Menu 
+       className='sider-bar'
         mode="inline"
-        defaultSelectedKeys={['1']}
         items={[
           {
             key: '1',
@@ -36,7 +39,7 @@ const MenuList: React.FC = () => {
           },
           {
             key: '5',
-            icon: <Exit className="menu-icon exit-icon"/>,
+            icon: <Exit className="menu-icon exit"/>,
             label: 'Выход',
           },
         ]}
