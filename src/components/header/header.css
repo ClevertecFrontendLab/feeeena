@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.header {
+    font-family: serif;
+}
+.header__row {
+    display: flex;
+    flex-direction: column;
+}
