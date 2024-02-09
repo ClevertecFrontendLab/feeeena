@@ -4,7 +4,8 @@ import { Button, Layout } from 'antd';
 import {MenuFoldOutlined,MenuUnfoldOutlined } from '@ant-design/icons';
 
 
-import style from'./mainPage.css';
+import "./sider.css";
+import "@pages/main-page/mainPage.css"
 import Logo from "./Logo"
 import MenuList from './MenuList';
 const logoExpanded = "./public/Logo.png";
