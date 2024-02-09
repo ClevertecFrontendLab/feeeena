@@ -2,11 +2,8 @@ import React from 'react';
 import { SettingOutlined } from '@ant-design/icons';
 import "./header.css";
 
-interface HeaderProps {
-  
-}
 
-const Header: React.FC<HeaderProps> = () => {
+const HeaderBox: React.FC = () => {
   return (
     <header className="header">
       <div className="container">
@@ -28,4 +25,4 @@ const Header: React.FC<HeaderProps> = () => {
   );
 };
 
-export default Header;
+export default HeaderBox;

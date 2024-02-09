@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
+import "./sider.css";
 
 const Exit: React.FC = () => {
     
     return (
-     <div className="exit-wrap">
-        <img src="./public/Exit-icon.png" alt="exit icon"/>
-        Выход
+     <div className="exit">
+        <img src="./public/Exit-icon.png" alt="exit icon" className='exit-icon'/>
      </div>
     );
   };

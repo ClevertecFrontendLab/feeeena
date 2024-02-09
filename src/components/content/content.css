@@ -1,0 +1,100 @@
+.actions-container {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    width: 752px;
+    height: 216px;
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+    margin-top: 20px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.actions-container p {
+    margin: 20px 0 0 20px;
+    color: rgba(47, 84, 235, 1);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.actions-container ul {
+    margin-top: 0;
+    list-style-type: none;
+    padding: 0;
+    word-wrap: break-word;
+    padding-left: 20px;
+}
+
+.actions-container li {
+    color: rgba(47, 84, 235, 1);
+}
+
+.actions-container li:before {
+    content: "—";
+    margin-right: 5px;
+}
+
+.wrapp-container {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 752px;
+    height: auto;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.wrapp-container p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    width: 752px;
+}
+
+.card {
+    width: 240px;
+    height: 101px;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 16px;
+    background-color: #fff;
+    margin-right: 16px;
+}
+
+.card p {
+    color: black;
+}
+
+.card:last-child {
+    margin-right: 0;
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    color: blue;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #2e8eb8;
+}
+
+.cards-line {
+    border-top: 0.5px solid rgba(128, 128, 128, 0.5);
+    margin-top: 5px;
+}

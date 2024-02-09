@@ -1,9 +1,11 @@
 import React from 'react';
 import { Menu } from 'antd';
-import {CalendarTwoTone, HeartFilled, TrophyFilled, IdcardOutlined} from '@ant-design/icons';
-
-
-
+import {CalendarTwoTone, 
+  HeartFilled, 
+  TrophyFilled, 
+  IdcardOutlined} from '@ant-design/icons';
+import "./sider.css";
+import Exit from './Exit';
 
 const MenuList: React.FC = () => {
     return (
@@ -31,6 +33,11 @@ const MenuList: React.FC = () => {
             key: '4',
             icon: <IdcardOutlined className="menu-icon"/>,
             label: 'Профиль',
+          },
+          {
+            key: '5',
+            icon: <Exit className="menu-icon exit-icon"/>,
+            label: 'Выход',
           },
         ]}
       />

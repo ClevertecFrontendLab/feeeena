@@ -3,10 +3,11 @@ import React, { useState } from 'react';
 import { Button, Layout } from 'antd';
 import {MenuFoldOutlined,MenuUnfoldOutlined } from '@ant-design/icons';
 
-import "./Sider.css"
+import "./sider.css"
 import Logo from "./Logo"
 import MenuList from './MenuList';
-import Exit from './Exit';
+const logoExpanded = "./public/Logo.png";
+const logoCollapsed = "./public/fit.png";
 
 const {Sider,Content} = Layout;
 
@@ -14,14 +15,14 @@ const SiderBar: React.FC = () => {
     const [collapsed, setCollapsed] = useState(false);
     return (
      <Layout>
-        <Sider trigger={null} collapsible collapsed={collapsed}> 
-            <Logo />
+        <Sider width={208} trigger={null} collapsible collapsed={collapsed}> 
+        <Logo src={collapsed ? logoCollapsed : logoExpanded} />
             <MenuList/>
-            <Exit/>
         </Sider>
-        <Layout>
+        <Layout >
           <Content>
-            <Button type='text' onClick={()=>setCollapsed(!collapsed)} icon={collapsed ? 
+            <Button type='text' className='trigger' 
+            onClick={()=>setCollapsed(!collapsed)} icon={collapsed ? 
             <MenuUnfoldOutlined/> : <MenuFoldOutlined /> }
             />
           </Content>
