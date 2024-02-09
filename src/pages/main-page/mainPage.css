@@ -1,5 +1,5 @@
 @import "./node_modules/antd/dist/antd.css";
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto:ital@1&display=swap");
 .sider-bar {
     background-color: rgb(255, 255, 255);
 }
@@ -10,6 +10,5 @@
     align-items: stretch;
     background-color: #f0f5ff;
     min-height: 168px;
-}
-.breadcrumb {
+    padding: 0 24px;
 }
