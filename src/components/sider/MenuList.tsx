@@ -1,35 +1,35 @@
 import React from 'react';
 import { Menu } from 'antd';
-import {CalendarTwoTone, 
-  HeartFilled, 
-  TrophyFilled, 
+import {CalendarOutlined, 
+  HeartOutlined, 
+  TrophyOutlined, 
   IdcardOutlined} from '@ant-design/icons';
 import "./sider.css";
 import Exit from './Exit';
 interface MenuListProps {
-  className?: string; 
+  style?: string; 
 }
 
 
-const MenuList: React.FC<MenuListProps> = ({className}) => {
+const MenuList: React.FC<MenuListProps> = ({style}) => {
     return (
         <Menu 
-       className='sider-bar'
+       className='menu-items'
         mode="inline"
         items={[
           {
             key: '1',
-            icon: <CalendarTwoTone className="menu-icon"/>,
+            icon: <CalendarOutlined className="menu-icon"/>,
             label: 'Календарь',
           },
           {
             key: '2',
-            icon: <HeartFilled className="menu-icon"/>,
+            icon: <HeartOutlined className="menu-icon"/>,
             label: 'Тренировки',
           },
           {
             key: '3',
-            icon: <TrophyFilled className="menu-icon"/>,
+            icon: <TrophyOutlined className="menu-icon"/>,
             label: 'Достижения',
           },
           {
@@ -39,7 +39,7 @@ const MenuList: React.FC<MenuListProps> = ({className}) => {
           },
           {
             key: '5',
-            icon: <Exit className="menu-icon exit"/>,
+            icon: <Exit style="box-shadow: inset 0 1px 0 0 #f0f0f0;"/>,
             label: 'Выход',
           },
         ]}

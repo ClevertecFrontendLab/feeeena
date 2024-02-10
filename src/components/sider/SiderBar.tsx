@@ -11,30 +11,29 @@ import MenuList from './MenuList';
 const logoExpanded = "./public/Logo.png";
 const logoCollapsed = "./public/fit.png";
 
+
 const {Sider,Content} = Layout;
 
 const SiderBar: React.FC = () => {
     const [collapsed, setCollapsed] = useState(false);
     return (
-      <>
-      <Layout>
-        <Sider width={208} trigger={null} collapsible collapsed={collapsed} className="sider-bar"> 
-        <Logo src={collapsed ? logoCollapsed : logoExpanded} />
-            <MenuList />
+      <Layout className="sider-layout">
+        <Sider trigger={null} collapsible collapsed={collapsed} className="sider-bar">
+          <Logo src={collapsed ? logoCollapsed : logoExpanded} />
+          <MenuList />
         </Sider>
-        <Layout >
-          <Content>
-            <Button type='text' className='trigger' 
-            onClick={()=>setCollapsed(!collapsed)} icon={collapsed ? 
-            <MenuUnfoldOutlined/> : <MenuFoldOutlined /> }
-            />
-          </Content>
-        </Layout>
-     </Layout>
-      </>
-     
+        <Content className="sider-content">
+          <Button
+            type='text'
+            className='trigger btn-col'
+            onClick={() => setCollapsed(!collapsed)}
+            icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+          />
+        </Content>
+      </Layout>
     );
   };
+  
 
   export default SiderBar;
   

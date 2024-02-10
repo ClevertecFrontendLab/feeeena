@@ -1,8 +1,10 @@
 @import "./node_modules/antd/dist/antd.css";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto:ital@1&display=swap");
-.sider-bar {
-    background-color: rgb(255, 255, 255);
+.main-page {
+    background: url("/feeeena/public/back_1440.png") no-repeat center center;
+    background-size: cover;
 }
+
 .header-content {
     display: flex;
     flex-direction: column;

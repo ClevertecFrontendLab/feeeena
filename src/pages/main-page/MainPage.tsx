@@ -17,7 +17,7 @@ import FooterBox from '@components/footer/FooterBox';
     return (
       <div className="main-page">
         <Layout style={{ minHeight: '100vh' }}>
-      <Sider className="sider-bar" >
+      <Sider >
         <SiderBar/>
         </Sider>
         <Layout >
