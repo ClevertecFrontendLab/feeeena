@@ -1,5 +1,4 @@
 import React from 'react';
-
 import "./content.css";
 
 const ContentActions: React.FC = () => {
@@ -15,5 +14,5 @@ const ContentActions: React.FC = () => {
     </div>
   );
 };
- 
+
 export default ContentActions;

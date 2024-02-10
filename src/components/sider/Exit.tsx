@@ -1,10 +1,10 @@
 import React from 'react';
 import "./sider.css";
 interface ExitProps {
-   style?: string; 
+   className?: string; 
  }
 
-const Exit: React.FC<ExitProps> = ({style}) => {
+const Exit: React.FC<ExitProps> = ({className}) => {
     
     return (
     <div className="exit-divide">

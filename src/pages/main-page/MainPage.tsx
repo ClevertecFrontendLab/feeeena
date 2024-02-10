@@ -13,32 +13,19 @@ import ContentCards from '@components/content/ContentCards';
 import FooterBox from '@components/footer/FooterBox';
 
  const MainPage: React.FC = () => {
-
-    return (
-      <div className="main-page">
-        <Layout style={{ minHeight: '100vh' }}>
-      <Sider >
-        <SiderBar/>
-        </Sider>
+   return (
+    <Layout className="main-page" style={{ minHeight: '100vh' }}>
+      <Sider><SiderBar/></Sider>
         <Layout >
-          <Header className='header-content'>
-            <HeaderBox />
-            </Header>
-          <Content >
-            <ContentActions/>
-            <ContentWrap/>
-            <ContentCards/>
-          </Content>
-
-          <Footer >
-            <FooterBox/>
-          </Footer>
-
+          <Header className='header-content'><HeaderBox /></Header>
+            <Content ><ContentActions/>
+              <ContentWrap/>
+              <ContentCards/>
+              <FooterBox/>
+              </Content>
+              
         </Layout>
       </Layout>
-      </div>
-    
-        
     );
 };
 export default MainPage;

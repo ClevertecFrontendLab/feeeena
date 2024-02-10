@@ -1,10 +1,16 @@
 @import "./node_modules/antd/dist/antd.css";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto:ital@1&display=swap");
-.main-page {
-    background: url("/feeeena/public/back_1440.png") no-repeat center center;
-    background-size: cover;
-}
 
+.ant-layout {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    min-height: 0;
+    background-image: url("/back_1440.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 .header-content {
     display: flex;
     flex-direction: column;
@@ -12,5 +18,5 @@
     align-items: stretch;
     background-color: #f0f5ff;
     min-height: 168px;
-    padding: 0 24px;
+    padding: 0;
 }

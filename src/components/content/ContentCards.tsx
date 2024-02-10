@@ -1,31 +1,39 @@
 import React from 'react';
-
 import "./content.css";
+import { HeartFilled, IdcardOutlined, CalendarTwoTone} from '@ant-design/icons';
 
-import { HeartFilled, CalendarFilled, ProfileOutlined } from '@ant-design/icons';
 
 const ContentCards: React.FC = () => {
   return (
-    <div className='container'>
-        <div className="cards-container">
+    <div className="cards-container">
       <div className="card">
-        <p>Расписать тренировки</p>
-        <hr className="cards-line" /> 
-        <button className="button"><HeartFilled/> Тренировки</button>
+        <div className='title'>
+          <p>Расписать тренировки</p>
+        </div>
+        <div className='btn'>
+            <button className="button"><HeartFilled className='btn-mar'/>Тренировки</button>
+        </div>
       </div>
+
       <div className="card">
-        <p>Назначить календарь</p>
-        <hr className="cards-line" /> 
-        <button className="button"><CalendarFilled /> Календарь</button>
+        <div className='title'>
+          <p>Назначить календарь</p>
+        </div>
+        <div className='btn'>
+            <button className="button"><CalendarTwoTone className='btn-mar'/>Календарь</button>
+        </div>
       </div>
+
       <div className="card">
-        <p>Заполнить профиль</p>
-        <hr className="cards-line" /> 
-        <button className="button"><ProfileOutlined /> Профиль</button>
+        <div className='title'>
+          <p>Заполнить профиль</p>
+        </div>
+        <div className='btn'>
+            <button className="button"><IdcardOutlined className='btn-mar'/>Профиль</button>
+        </div>
       </div>
-    </div>
-    </div>
-    
+      
+     </div>
   );
 };
 

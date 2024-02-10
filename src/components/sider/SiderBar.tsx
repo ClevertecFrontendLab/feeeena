@@ -12,24 +12,24 @@ const logoExpanded = "./public/Logo.png";
 const logoCollapsed = "./public/fit.png";
 
 
-const {Sider,Content} = Layout;
+const {Sider} = Layout;
 
 const SiderBar: React.FC = () => {
     const [collapsed, setCollapsed] = useState(false);
     return (
-      <Layout className="sider-layout">
+      <Layout className={`sider-layout ${collapsed ? 'sider-collapsed' : ''}`}>
         <Sider trigger={null} collapsible collapsed={collapsed} className="sider-bar">
           <Logo src={collapsed ? logoCollapsed : logoExpanded} />
           <MenuList />
         </Sider>
-        <Content className="sider-content">
+        <div className="trigger-container">
           <Button
             type='text'
-            className='trigger btn-col'
+            className={`trigger btn-col ${collapsed ? 'collapsed' : ''}`}
             onClick={() => setCollapsed(!collapsed)}
             icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
           />
-        </Content>
+        </div>
       </Layout>
     );
   };

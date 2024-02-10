@@ -18,7 +18,6 @@ root.render(
             <HashRouter>
                 <Routes>
                    <Route path='/' element={<MainPage />} />
-                  
                 </Routes>
             </HashRouter>
         </Provider>
