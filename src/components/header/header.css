@@ -3,8 +3,8 @@ body {
     padding: 0;
 }
 .container {
-    width: 1184px;
-    margin: 0 auto;
+    margin-left: 24px;
+    display: flex;
 }
 .breadcrumb {
     font-family: "Inter", sans-serif;
@@ -17,14 +17,24 @@ body {
     font-size: 38px;
     line-height: 130%;
     padding-bottom: 20px;
+    padding: 8px 8px 0px 0px;
 }
 .blocks {
     display: flex;
-    padding: 8px 8px 0px 0px;
-    width: 1184px;
-    height: 118px;
+    flex-direction: column;
+    width: 1199px;
 }
-
+.set {
+    margin-right: -40px;
+    margin-top: 32px;
+}
+.btn {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    text-align: center;
+}
 .btn.ant-btn-text {
     color: inherit;
     background-color: transparent;
