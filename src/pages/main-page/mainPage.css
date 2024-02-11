@@ -6,6 +6,8 @@
     flex: auto;
     flex-direction: column;
     min-height: 0;
+    max-width: 1440px;
+    max-height: 1024px;
     background-image: url("/back_1440.png");
     background-size: cover;
     background-position: center;

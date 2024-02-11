@@ -44,53 +44,29 @@
     background: #fff;
     transition: all 0.2s;
 }
-.btn-col {
-    background-image: url("feeeena/public/Rectangle.png");
+.trigger-col {
+    background-color: rgb(255, 255, 255);
+    clip-path: polygon(0 0, 100% 21%, 100% 80%, 0 100%);
+    
 }
-.sider-bar {
-    position: relative;
-    transition: all 0.3s;
+.trigger-col svg path {
+    fill: #8C8C8C;
 }
-
-.trigger-container {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
-    transition: all 0.3s;
+.trigger {
+    margin-top: 310px;
+    height: 66px;
+    width: 20px;
 }
-
-.trigger.collapsed {
-    transform: translateX(100%) translateY(-50%);
+.ant-btn-icon-only {
+    margin-right: 0;
 }
-
-.sider-collapsed .trigger-container {
-    transform: translateX(0) translateY(-50%);
+.ant-btn-icon-only {
+    padding: 2.4px 0;
+    font-size: 16px;
+    border-radius: 2px;
+    vertical-align: -3px;
 }
-.sider-layout {
-    display: flex;
-}
-
-.sider-bar {
-    flex: 0 0 auto;
-    max-width: 250px;
-}
-
-.trigger-container {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.sider-collapsed .trigger-container {
-    margin-left: -250px;
-}
-
-.sider-collapsed .trigger {
-    margin-left: 0;
-}
-
-.sider-collapsed .ant-layout {
-    margin-left: 80px;
+.trigger:active,
+.trigger.active {
+    background-color: rgb(255, 255, 255);  // Цвет фона при активации
 }
