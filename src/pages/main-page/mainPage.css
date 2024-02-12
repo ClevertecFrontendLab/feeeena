@@ -19,6 +19,17 @@
     justify-content: space-between;
     align-items: stretch;
     background-color: #f0f5ff;
-    min-height: 168px;
+    height: 168px;
     padding: 0;
+}
+
+@media screen and (max-width: 834px) {
+    .ant-layout {
+        max-width: 834px;
+        max-height: 1194px;
+    }
+    .header-content {
+        max-width: 770px;
+        height: auto;
+    }
 }

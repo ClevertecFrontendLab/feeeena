@@ -6,10 +6,7 @@ import { Button } from 'antd';
 const Footer: React.FC = () => {
   return (
     <div className="footer-container">
-
-       <Button type="text" className="button-reviews">Смотреть отзывы</Button>
-
-
+         <Button type="text" className="button-reviews">Смотреть отзывы</Button>
        <div className="footer-right">
         <div className="footer-row">
           <p className="download">Скачать на телефон</p>
@@ -21,7 +18,7 @@ const Footer: React.FC = () => {
           <button className="button-black aplle"><AppleFilled /> Apple IOS</button>
         </div>
       </div>
-    </div>
+      </div>
   );
 };
 

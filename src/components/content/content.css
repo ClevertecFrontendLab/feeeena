@@ -1,17 +1,20 @@
+.content {
+    max-width: 752px;
+    margin-left: 24px;
+}
 .actions-container {
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 2px;
-    width: 752px;
-    height: 216px;
+    min-width: 752px;
     box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
     margin-top: 24px;
     display: inline-block;
     vertical-align: top;
-    margin-left: 3px;
 }
 .actions {
     padding: 24px;
+    width: 704px;
 }
 .actions-container p {
     font-family: "Inter", sans-serif;
@@ -46,14 +49,13 @@
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 10px;
-    width: 752px;
+
     height: auto;
     box-sizing: border-box;
     display: inline-block;
     vertical-align: top;
     background-color: #ffffff;
-    margin-top: -115px;
-    margin-left: 24px;
+    margin-top: 24px;
     padding: 24px 24px;
 }
 
@@ -69,9 +71,9 @@
 .cards-container {
     display: flex;
     justify-content: space-between;
-    width: 752px;
-    margin-top: -12px;
-    margin-left: 24px;
+    max-width: 752px;
+
+    margin-top: 16px;
 }
 
 .card {
@@ -94,13 +96,13 @@
 }
 .title {
     padding: 12px 24px;
-    width: 240px;
+    min-width: 240px;
     height: 45px;
     border-bottom: 0.5px solid rgba(128, 128, 128, 0.5);
 }
 .btn {
     padding: 12px 0px;
-    width: 240px;
+
     height: 56px;
     align-items: center;
 }
@@ -123,4 +125,61 @@
 }
 .button:hover {
     background-color: #2e8eb8;
+}
+@media screen and (max-width: 834px) {
+    .content {
+        min-width: 578px;
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+    .actions-container {
+        width: 100%;
+        min-width: 578px;
+        max-width: 722px;
+    }
+    .actions {
+        width: 100%;
+        padding-left: 24px;
+        min-width: 530px;
+        height: auto;
+    }
+    .wrapp-container {
+        min-width: 578px;
+        max-width: 722px;
+    }
+    .wrapp-container p {
+        width: 100%;
+        min-width: 530px;
+        max-width: 674px;
+        letter-spacing: 0.3px;
+        font-size: 20px;
+    }
+    .cards-container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 722px;
+        min-width: 578px;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        max-width: 230px;
+        min-width: 182px;
+        height: auto;
+    }
+    .title {
+        height: 66px;
+        min-width: 134px;
+        text-align: left;
+    }
+    .btn {
+        padding: 15px 0px;
+        align-items: center;
+    }
+    .tren {
+        letter-spacing: -0.7px;
+    }
+    .card3 {
+        margin-right: 0;
+    }
 }

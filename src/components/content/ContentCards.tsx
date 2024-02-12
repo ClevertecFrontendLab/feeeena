@@ -8,7 +8,7 @@ const ContentCards: React.FC = () => {
     <div className="cards-container">
       <div className="card">
         <div className='title'>
-          <p>Расписать тренировки</p>
+          <p className='tren'>Расписать тренировки</p>
         </div>
         <div className='btn'>
             <button className="button"><HeartFilled className='btn-mar'/>Тренировки</button>
@@ -24,7 +24,7 @@ const ContentCards: React.FC = () => {
         </div>
       </div>
 
-      <div className="card">
+      <div className="card card3">
         <div className='title'>
           <p>Заполнить профиль</p>
         </div>

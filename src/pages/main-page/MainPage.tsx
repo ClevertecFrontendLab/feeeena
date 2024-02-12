@@ -8,10 +8,9 @@ import "@components/sider/sider.css"
 
 import HeaderBox from '@components/header/HeaderBox';
 
-import ContentActions from '@components/content/ContentActions';
-import ContentWrap from '@components/content/ContentWrap';
-import ContentCards from '@components/content/ContentCards';
-import FooterBox from '@components/footer/FooterBox';
+
+import Exit from '@components/sider/Exit';
+import ContentBar from '@components/content/contentBar';
 
 import {MenuFoldOutlined,MenuUnfoldOutlined } from '@ant-design/icons';
 import Logo from "@components/sider/Logo.tsx"
@@ -24,26 +23,20 @@ const logoCollapsed = "./public/fit.png";
   const [collapsed, setCollapsed] = useState(false);
    return (
     <Layout className={`sider-layout main-page`} style={{ minHeight: '100vh' }}>
-        <Sider trigger={null} collapsible collapsed={collapsed} className="sider-bar">
-          <Logo src={collapsed ? logoCollapsed : logoExpanded} />
-          <MenuList />
-        </Sider>
-        <Layout >
-          <Header className='header-content'><HeaderBox /></Header>
-            <Content>
-              <Button
+        <Sider collapsedWidth={64} trigger={null} collapsible collapsed={collapsed} className="sider-bar">
+        <Button 
               type='text'
               className={`trigger trigger-col`}
               onClick={() => setCollapsed(!collapsed)}
-              icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+              icon={collapsed ? <MenuUnfoldOutlined/> : <MenuFoldOutlined />}
               />
-              <ContentActions/>
-              
-              <ContentWrap/>
-              <ContentCards/>
-              <FooterBox/>
-              </Content>
-              
+          <Logo src={collapsed ? logoCollapsed : logoExpanded} />
+          <MenuList />
+          <Exit collapsed={collapsed} />
+        </Sider>
+        <Layout >
+          <HeaderBox />
+          <ContentBar/>
         </Layout>
       </Layout>
    

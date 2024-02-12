@@ -5,7 +5,7 @@ import {CalendarTwoTone,
   TrophyFilled, 
   IdcardOutlined} from '@ant-design/icons';
 import "./sider.css";
-import Exit from './Exit';
+
 
 
 
@@ -23,10 +23,6 @@ const MenuList: React.FC = () => {
       </Menu.Item>
       <Menu.Item key="4" icon={<IdcardOutlined className="menu-icon" />}>
         Профиль
-      </Menu.Item>
-      <Menu.Item key="spacer" style={{ height: '635px' }} disabled></Menu.Item>
-      <Menu.Item key="5" icon={<Exit />} className='exit'>
-        Выход
       </Menu.Item>
     </Menu>
   );
