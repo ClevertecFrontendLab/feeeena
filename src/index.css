@@ -1,10 +1,9 @@
 @import "antd/dist/antd.css";
-@import "./components/sider/sider.css";
-@import "./components/footer/footer.css";
-@import "./components/header/header.css";
-@import "./components/content/content.css";
-@import "./pages/main-page/mainPage.css";
-
+@import "@components/sider/sider.css";
+@import "@components/footer/footer.css";
+@import "@components/header/header.css";
+@import "@components/content/content.css";
+@import "@pages/main-page/mainPage.css";
 :root {
     min-height: 100vh;
 }

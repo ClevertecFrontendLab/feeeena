@@ -4,7 +4,7 @@
     padding-bottom: 24px;
 }
 .actions-container {
-    background-color: #ffffff;
+    background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 2px;
     width: 100%;
@@ -54,9 +54,9 @@
     box-sizing: border-box;
     display: inline-block;
     vertical-align: top;
-    background-color: #ffffff;
+    background-color: #fff;
     margin-top: 24px;
-    padding: 24px 24px;
+    padding: 24px;
 }
 
 .wrapp-container p {
@@ -97,12 +97,11 @@
 }
 .title {
     padding: 12px 24px;
-    /* min-width: 240px; */
     height: 45px;
     border-bottom: 0.5px solid rgba(128, 128, 128, 0.5);
 }
 .btn {
-    padding: 12px 0px;
+    padding: 12px 0;
 
     height: 56px;
     align-items: center;
@@ -167,7 +166,7 @@
         text-align: left;
     }
     .btn {
-        padding: 15px 0px;
+        padding: 15px 0;
         align-items: center;
     }
     .tren {
@@ -227,7 +226,7 @@
         text-align: center;
     }
     .btn {
-        padding: 15px 0px;
+        padding: 15px 0;
         align-items: center;
     }
 
