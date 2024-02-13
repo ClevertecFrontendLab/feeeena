@@ -4,7 +4,7 @@ import { Button, Layout } from 'antd';
 const { Sider} = Layout;
 
 import './mainPage.css';
-import "@components/sider/sider.css"
+
 
 import HeaderBox from '@components/header/HeaderBox';
 
@@ -23,6 +23,7 @@ const MainPage: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false);
   const [collapsedWidth, setCollapsedWidth] = useState(64);
   const [expandedWidth, setExpandedWidth] = useState(200);
+  const [siderTestId, setSiderTestId] = useState('');
 
   useEffect(() => {
     const handleResize = () => {
@@ -32,6 +33,9 @@ const MainPage: React.FC = () => {
 
       setCollapsedWidth(newCollapsedWidth);
       setExpandedWidth(newExpandedWidth);
+
+      const newSiderTestId = screenWidth <= 360 ? 'sider-switch-mobile' : 'sider-switch';
+      setSiderTestId(newSiderTestId);
     };
 
     handleResize();
@@ -50,7 +54,7 @@ const MainPage: React.FC = () => {
           className={`trigger trigger-col`}
           onClick={() => setCollapsed(!collapsed)}
           icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-          data-test-id={window.innerWidth <= 360 ? 'sider-switch-mobile' : 'sider-switch'}
+          data-test-id={siderTestId}
         />
           <Logo src={collapsed ? logoCollapsed : logoExpanded} />
           <MenuList />
@@ -61,7 +65,7 @@ const MainPage: React.FC = () => {
           <ContentBar/>
         </Layout>
       </Layout>
-   
     );
 };
+
 export default MainPage;

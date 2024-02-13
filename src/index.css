@@ -2,3 +2,8 @@
     width: 100vw;
     height: 100vh;
 }
+@import url("./src/components/sider/sider.css");
+@import url("./src/components/footer/footer.css");
+@import url("./src/components/header/header.css");
+@import url("./src/components/content/content.css");
+@import url("./src/pages/main-page/mainPage.css");
