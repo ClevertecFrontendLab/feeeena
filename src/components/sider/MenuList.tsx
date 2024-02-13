@@ -5,13 +5,9 @@ import {CalendarTwoTone,
   TrophyFilled, 
   IdcardOutlined} from '@ant-design/icons';
 import "./sider.css";
-
-
-
-
 const MenuList: React.FC = () => {
   return (
-    <Menu mode="inline" className="menu-items">
+    <Menu mode="inline" className="menu-items" style={{ width: '100%' }}>
       <Menu.Item key="1" icon={<CalendarTwoTone className="menu-icon" />}>
         Календарь
       </Menu.Item>
@@ -28,4 +24,4 @@ const MenuList: React.FC = () => {
   );
 };
 
-  export default MenuList;
+export default MenuList;

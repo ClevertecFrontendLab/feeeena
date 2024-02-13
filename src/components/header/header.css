@@ -33,11 +33,19 @@ body {
     font-size: 14px;
     line-height: 130%;
     text-align: center;
+    display: flex;
 }
 .btn1.ant-btn-text {
     color: inherit;
     background-color: transparent;
     border-color: transparent;
+}
+.setting {
+    display: flex;
+    align-items: center;
+}
+.ok {
+    margin-left: 8px;
 }
 @media screen and (max-width: 834px) {
     .blocks h1 {
@@ -62,7 +70,7 @@ body {
         font-size: 14px;
         line-height: 130%;
     }
-    .anticon-setting {
+    .btn1 .set-icon {
         display: none;
     }
 }
@@ -70,9 +78,9 @@ body {
     .blocks h1 {
         font-family: "Inter", sans-serif;
         font-weight: 500;
-        font-size: 20px;
+        font-size: 19px;
         line-height: 130%;
-        letter-spacing: -1px;
+        letter-spacing: 1.2px;
         height: auto;
         min-width: 280px;
         min-height: 116px;
@@ -83,21 +91,19 @@ body {
         font-size: 14px;
         margin-top: 20px;
     }
-    .ok {
+    .btn1 .set-icon {
+        display: inline-block;
+    }
+    .btn1 .ok {
         display: none;
     }
-
-    .btn1 {
+    .setting .btn1 {
+        border: 1px solid #d9d9d9;
+        border-radius: 100px;
         width: 32px;
         height: 32px;
-        background-color: #fff;
-        clip-path: circle(50% at 50% 50%);
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-
-    .set-icon {
-        margin-top: 3px;
     }
 }

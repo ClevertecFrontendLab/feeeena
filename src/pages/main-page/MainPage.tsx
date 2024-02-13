@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect } from 'react';
 
 import { Button, Layout } from 'antd';
 const { Sider} = Layout;
@@ -19,17 +19,39 @@ const logoExpanded = "./public/Logo.png";
 const logoCollapsed = "./public/fit.png";
 
 
- const MainPage: React.FC = () => { 
+const MainPage: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false);
-   return (
+  const [collapsedWidth, setCollapsedWidth] = useState(64);
+  const [expandedWidth, setExpandedWidth] = useState(200);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+      const newCollapsedWidth = screenWidth <= 360 ? 0 : 64;
+      const newExpandedWidth = screenWidth <= 360 ? 106 : 200;
+
+      setCollapsedWidth(newCollapsedWidth);
+      setExpandedWidth(newExpandedWidth);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  return (
     <Layout className={`sider-layout main-page`} style={{ minHeight: '100vh' }}>
-        <Sider breakpoint={"sm"} collapsedWidth={64}  trigger={null} collapsible collapsed={collapsed} className="sider-bar">
-        <Button 
-              type='text'
-              className={`trigger trigger-col`}
-              onClick={() => setCollapsed(!collapsed)}
-              icon={collapsed ? <MenuUnfoldOutlined/> : <MenuFoldOutlined />}
-              />
+      <Sider breakpoint="sm" trigger={null} collapsible collapsed={collapsed} collapsedWidth={collapsedWidth} width={expandedWidth} className="sider-bar">
+        <Button
+          type='text'
+          className={`trigger trigger-col`}
+          onClick={() => setCollapsed(!collapsed)}
+          icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+          data-test-id={window.innerWidth <= 360 ? 'sider-switch-mobile' : 'sider-switch'}
+        />
           <Logo src={collapsed ? logoCollapsed : logoExpanded} />
           <MenuList />
           <Exit collapsed={collapsed} />

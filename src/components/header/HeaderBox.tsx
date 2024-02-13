@@ -17,9 +17,13 @@ const HeaderBox: React.FC = () => {
         </Breadcrumb>
           <h1>Приветствуем тебя в CleverFit — приложении,<br/> которое поможет тебе добиться своей мечты!</h1>
           </div>
-          
-            <Button type="text" className='btn1'><SettingOutlined className='set-icon'/><p className='ok'>Настройки</p></Button>
-          
+          <div className='setting'>
+          <Button type="text" 
+          className='btn1'>
+            <SettingOutlined className='set-icon'/>
+            <p className='ok'>Настройки</p>
+            </Button>
+          </div>
     </div>
     </Header>
   );

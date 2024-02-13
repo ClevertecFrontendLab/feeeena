@@ -170,6 +170,8 @@
     .title {
         height: 66px;
         min-width: 134px;
+        min-height: 45px;
+        max-height: 66px;
         text-align: left;
     }
     .btn {
@@ -183,7 +185,7 @@
         margin-right: 0;
     }
 }
-@media screen and (max-width: 834px) {
+@media screen and (max-width: 360px) {
     .content {
         min-width: 328px;
         margin-left: 16px;
@@ -193,9 +195,11 @@
         width: 100%;
         min-width: 328px;
     }
+    .actions-container li {
+    }
     .actions {
         width: 100%;
-        padding: 16px;
+        /* padding: 16px; */
         min-width: 296px;
     }
     .wrapp-container {
@@ -228,5 +232,9 @@
     .btn {
         padding: 15px 0px;
         align-items: center;
+    }
+
+    .menu-items .ant-menu-item {
+        padding-left: 0 !important;
     }
 }
