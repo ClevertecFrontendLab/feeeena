@@ -29,7 +29,7 @@ const MenuList: React.FC = () => {
     },
   ];
   return (
-    <Menu mode="inline" className="menu-items" style={{ width: '100%' }}>
+    <Menu mode="inline" className="menu-items" style={{ width: '100%', fontStyle: 'normal' }}>
       {items.map(item => (
         <Menu.Item key={item.key} icon={item.icon}>{item.label}</Menu.Item>
       ))}

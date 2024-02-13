@@ -37,6 +37,7 @@
     position: relative;
     padding: 0 16px;
     font-style: normal;
+    font-family: "Inter", sans-serif;
 }
 .exit-icon {
     margin-right: 17px;
@@ -152,5 +153,6 @@
         width: 106px !important;
         margin: 0 !important;
         padding: 0 !important;
+        letter-spacing: -1px;
     }
 }
