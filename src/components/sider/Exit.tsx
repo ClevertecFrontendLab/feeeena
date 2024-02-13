@@ -1,5 +1,5 @@
 import React from 'react';
-import "./sider.css";
+
 import { Button } from 'antd';
 
 interface ExitProps {

@@ -5,13 +5,10 @@ body {
 .container {
     display: flex;
     justify-content: space-between;
-    margin-left: 24px;
-    margin-right: 24px;
 }
 .breadcrumb {
     font-family: "Inter", sans-serif;
     font-size: 14px;
-    margin-top: 20px;
 }
 .blocks h1 {
     font-family: "Inter", sans-serif;
@@ -24,7 +21,6 @@ body {
 .blocks {
     display: flex;
     flex-direction: column;
-    width: 1199px;
 }
 
 .btn1 {
@@ -42,7 +38,6 @@ body {
 }
 .setting {
     display: flex;
-    align-items: center;
 }
 .ok {
     margin-left: 8px;
@@ -54,7 +49,6 @@ body {
         font-size: 24px;
         line-height: 130%;
         max-width: 620px;
-        min-width: 473px;
         letter-spacing: -1px;
         height: auto;
     }
@@ -62,7 +56,6 @@ body {
         font-family: "Inter", sans-serif;
         font-weight: 400;
         font-size: 14px;
-        margin-top: 20px;
     }
     .btn1 {
         font-family: "Inter", sans-serif;
@@ -82,14 +75,11 @@ body {
         line-height: 130%;
         letter-spacing: 1.2px;
         height: auto;
-        min-width: 280px;
-        min-height: 116px;
     }
     .breadcrumb {
         font-family: "Inter", sans-serif;
         font-weight: 400;
         font-size: 14px;
-        margin-top: 20px;
     }
     .btn1 .set-icon {
         display: inline-block;
@@ -99,6 +89,7 @@ body {
     }
     .setting .btn1 {
         border: 1px solid #d9d9d9;
+        background-color: #fff;
         border-radius: 100px;
         width: 32px;
         height: 32px;

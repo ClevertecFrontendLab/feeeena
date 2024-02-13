@@ -1,5 +1,5 @@
 
-import "./sider.css";
+
 
 
 const Logo = ({ src }: { src: string }) => {

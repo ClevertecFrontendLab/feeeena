@@ -1,5 +1,5 @@
 import React from 'react';
-import "./content.css";
+
 import { HeartFilled, IdcardOutlined, CalendarTwoTone} from '@ant-design/icons';
 
 

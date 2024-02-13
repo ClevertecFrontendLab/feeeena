@@ -4,23 +4,37 @@ import {CalendarTwoTone,
   HeartFilled, 
   TrophyFilled, 
   IdcardOutlined} from '@ant-design/icons';
-import "./sider.css";
+
 const MenuList: React.FC = () => {
+  const items = [
+    {
+      key: '1',
+      icon: <CalendarTwoTone className="menu-icon" />,
+      label: 'Календарь',
+    },
+    {
+      key: '2',
+      icon: <HeartFilled className="menu-icon" />,
+      label: 'Тренировки',
+    },
+    {
+      key: '3',
+      icon: <TrophyFilled className="menu-icon" />,
+      label: 'Достижения',
+    },
+    {
+      key: '4',
+      icon: <IdcardOutlined className="menu-icon" />,
+      label: 'Профиль',
+    },
+  ];
   return (
     <Menu mode="inline" className="menu-items" style={{ width: '100%' }}>
-      <Menu.Item key="1" icon={<CalendarTwoTone className="menu-icon" />}>
-        Календарь
-      </Menu.Item>
-      <Menu.Item key="2" icon={<HeartFilled className="menu-icon" />}>
-        Тренировки
-      </Menu.Item>
-      <Menu.Item key="3" icon={<TrophyFilled className="menu-icon" />}>
-        Достижения
-      </Menu.Item>
-      <Menu.Item key="4" icon={<IdcardOutlined className="menu-icon" />}>
-        Профиль
-      </Menu.Item>
+      {items.map(item => (
+        <Menu.Item key={item.key} icon={item.icon}>{item.label}</Menu.Item>
+      ))}
     </Menu>
+   
   );
 };
 

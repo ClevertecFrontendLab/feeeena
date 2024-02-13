@@ -1,5 +1,4 @@
 .sider-bar {
-    height: 100vh;
     background-color: #fff;
     color: black;
     position: relative;
@@ -13,6 +12,11 @@
     height: 64px;
     margin-top: 30px;
     margin-bottom: 25px;
+}
+
+.ant-btn-text:focus.trigger,
+.ant-btn-text:hover.trigger {
+    background-color: #fff;
 }
 
 .logo-img {
@@ -71,6 +75,7 @@
     height: 66px;
     width: 20px;
 }
+
 .ant-btn-icon-only {
     margin-right: 0;
 }
@@ -95,17 +100,24 @@
         width: 20px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .sider-bar {
+        height: 100vh;
+        position: fixed;
+    }
+}
+
 @media screen and (max-width: 360px) {
     .sider-bar {
-        max-height: 640px;
         position: fixed;
     }
 
     .trigger {
         position: absolute;
         right: 0;
-        top: 10%;
-        transform: translate(100%, -50%);
+        top: 50px;
+
         width: 32px;
         height: 48px;
     }

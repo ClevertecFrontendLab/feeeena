@@ -1,9 +1,10 @@
+@import url("antd/dist/antd.css");
+@import url("./components/sider/sider.css");
+@import url("./components/footer/footer.css");
+@import url("./components/header/header.css");
+@import url("./components/content/content.css");
+@import url("./pages/main-page/mainPage.css");
+
 :root {
-    width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
 }
-@import url("./src/components/sider/sider.css");
-@import url("./src/components/footer/footer.css");
-@import url("./src/components/header/header.css");
-@import url("./src/components/content/content.css");
-@import url("./src/pages/main-page/mainPage.css");

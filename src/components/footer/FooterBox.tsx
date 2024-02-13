@@ -1,11 +1,12 @@
 import React from 'react';
-import "./footer.css";
+
 import { AndroidFilled, AppleFilled } from '@ant-design/icons';
 import { Button } from 'antd';
 
 const Footer: React.FC = () => {
   return (
-    <div className="footer-container">
+    <div className="cont">
+      <div className="footer-container">
          <Button type="text" className="button-reviews">Смотреть отзывы</Button>
        <div className="footer-right">
         <div className="footer-row">
@@ -19,6 +20,8 @@ const Footer: React.FC = () => {
         </div>
       </div>
       </div>
+    </div>
+    
   );
 };
 

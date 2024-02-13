@@ -3,7 +3,7 @@ import React,{useState, useEffect } from 'react';
 import { Button, Layout } from 'antd';
 const { Sider} = Layout;
 
-import './mainPage.css';
+
 
 
 import HeaderBox from '@components/header/HeaderBox';
@@ -48,7 +48,7 @@ const MainPage: React.FC = () => {
 
   return (
     <Layout className={`sider-layout main-page`} style={{ minHeight: '100vh' }}>
-      <Sider breakpoint="sm" trigger={null} collapsible collapsed={collapsed} collapsedWidth={collapsedWidth} width={expandedWidth} className="sider-bar">
+      <Sider theme={"light"} trigger={null} collapsible collapsed={collapsed} collapsedWidth={collapsedWidth} width={expandedWidth} className="sider-bar">
         <Button
           type='text'
           className={`trigger trigger-col`}

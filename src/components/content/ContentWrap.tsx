@@ -1,5 +1,5 @@
 import React from 'react';
-import "./content.css";
+
 
 const ContentWrap: React.FC = () => {
   return (
