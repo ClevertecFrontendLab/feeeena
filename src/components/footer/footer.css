@@ -94,3 +94,38 @@
         margin-right: 24px;
     }
 }
+
+@media screen and (max-width: 360px) {
+    .footer-container {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-top: 16px;
+    }
+
+    .footer-right {
+        position: static;
+        min-width: 328px;
+        margin-bottom: 16px;
+        margin: 0 auto;
+    }
+
+    .button-reviews {
+        margin: 0 auto;
+        position: static; /* убираем absolute */
+        padding-top: 42px;
+    }
+    .footer-row {
+        height: 71px;
+        align-items: center;
+        padding: 0;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .footer-buttons {
+        height: 56px;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+}

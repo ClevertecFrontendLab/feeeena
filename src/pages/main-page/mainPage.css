@@ -33,3 +33,13 @@
         height: auto;
     }
 }
+@media screen and (max-width: 360px) {
+    .ant-layout {
+        max-width: 360px;
+        max-height: 1362px;
+    }
+    .header-content {
+        max-width: 360px;
+        height: auto;
+    }
+}

@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 
 import { Button, Layout } from 'antd';
-const { Sider, Header, Content } = Layout;
+const { Sider} = Layout;
 
 import './mainPage.css';
 import "@components/sider/sider.css"
@@ -23,7 +23,7 @@ const logoCollapsed = "./public/fit.png";
   const [collapsed, setCollapsed] = useState(false);
    return (
     <Layout className={`sider-layout main-page`} style={{ minHeight: '100vh' }}>
-        <Sider collapsedWidth={64} trigger={null} collapsible collapsed={collapsed} className="sider-bar">
+        <Sider breakpoint={"sm"} collapsedWidth={64}  trigger={null} collapsible collapsed={collapsed} className="sider-bar">
         <Button 
               type='text'
               className={`trigger trigger-col`}
@@ -35,13 +35,11 @@ const logoCollapsed = "./public/fit.png";
           <Exit collapsed={collapsed} />
         </Sider>
         <Layout >
-          <HeaderBox />
+          <HeaderBox /> 
           <ContentBar/>
         </Layout>
       </Layout>
    
-        
-     
     );
 };
 export default MainPage;

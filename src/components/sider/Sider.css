@@ -63,7 +63,6 @@
     clip-path: polygon(0 0, 100% 21%, 100% 80%, 0 100%);
     color: #8c8c8c;
 }
-
 .trigger {
     position: absolute;
     right: 0;
@@ -81,21 +80,12 @@
     border-radius: 2px;
     vertical-align: -3px;
 }
-.trigger:active,
-.trigger.active {
-    background-color: #fff;
-}
-.spacer {
-    height: 635px !important;
-}
 
 @media screen and (max-width: 834px) {
     .sider-bar {
         width: 100%;
     }
-    .spacer {
-        height: 805px !important;
-    }
+
     .trigger {
         position: absolute;
         right: 0;
@@ -103,5 +93,37 @@
         transform: translate(100%, -50%);
         height: 66px;
         width: 20px;
+    }
+}
+@media screen and (max-width: 360px) {
+    /*.sider-bar {
+        max-width: 106px !important;
+        max-height: 640px;
+    }*/
+    .sider-bar {
+        display: none;
+    }
+    .ant-layout-sider {
+        max-width: 106px !important;
+    }
+    .trigger {
+        position: absolute;
+        right: 0;
+        top: 10%;
+        transform: translate(100%, -50%);
+        width: 32px;
+        height: 48px;
+    }
+    .trigger-col {
+        background-color: #fff;
+        clip-path: polygon(0 0, 100% 15%, 100% 83%, 0% 100%);
+        color: #8c8c8c;
+    }
+    .logo-img {
+        width: 72px;
+        height: 18px;
+    }
+    .menu-icon {
+        display: none;
     }
 }
