@@ -113,7 +113,7 @@
 
     .button-reviews {
         margin: 0 auto;
-        position: static; /* убираем absolute */
+        position: static;
         padding-top: 42px;
     }
     .footer-row {
