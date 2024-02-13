@@ -36,6 +36,7 @@
     flex-direction: column;
     position: relative;
     padding: 0 16px;
+    font-style: normal;
 }
 .exit-icon {
     margin-right: 17px;
