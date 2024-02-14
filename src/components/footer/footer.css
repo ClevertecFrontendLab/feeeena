@@ -1,0 +1,128 @@
+.footer-container {
+    padding: 156px 24px 42px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: transparent;
+    border: none;
+}
+
+.button-reviews {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    color: #2f54eb;
+    cursor: pointer;
+    bottom: 0;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 240px;
+    height: 127px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.footer-row {
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+    margin-top: 16px;
+}
+
+.download {
+    font-family: "Inter", sans-serif;
+    color: #2f54eb;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+}
+.pro {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: gray;
+    line-height: 100%;
+    font-weight: 400;
+}
+
+.footer-buttons {
+    display: flex;
+    justify-content: space-between;
+    height: 50%;
+    border-top: 0.5px solid rgba(128, 128, 128, 0.5);
+}
+
+.button-black {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+
+.android {
+    margin-left: 7px;
+}
+.aplle {
+    margin-right: 7px;
+}
+@media screen and (max-width: 834px) {
+    .footer-container {
+        padding-top: 237px;
+    }
+    .content {
+        max-width: 752px;
+        margin-left: 24px;
+        padding-bottom: 24px;
+        flex: 1;
+    }
+    .ant-layout-content {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .footer-container {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0 16px 16px;
+    }
+
+    .footer-right {
+        position: static;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .button-reviews {
+        margin: 0 auto;
+        position: static;
+        padding-top: 42px;
+    }
+    .footer-row {
+        height: 71px;
+        align-items: center;
+        padding: 0;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .footer-buttons {
+        height: 56px;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+}

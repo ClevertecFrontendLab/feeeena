@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+.breadcrumb {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+}
+.blocks h1 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 130%;
+    padding: 8px 8px 0 0;
+}
+.blocks {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn1 {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    text-align: center;
+    display: flex;
+}
+.btn1.ant-btn-text {
+    color: inherit;
+    background-color: transparent;
+    border-color: transparent;
+}
+.setting {
+    display: flex;
+}
+.ok {
+    margin-left: 8px;
+}
+@media screen and (max-width: 834px) {
+    .blocks h1 {
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 130%;
+        max-width: 620px;
+        letter-spacing: -1px;
+        height: auto;
+    }
+    .breadcrumb {
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+    }
+    .btn1 {
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 130%;
+    }
+    .btn1 .set-icon {
+        display: none;
+    }
+}
+@media screen and (max-width: 360px) {
+    .blocks h1 {
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 130%;
+        letter-spacing: 1.2px;
+        height: auto;
+    }
+    .breadcrumb {
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+    }
+    .btn1 .set-icon {
+        display: inline-block;
+    }
+    .btn1 .ok {
+        display: none;
+    }
+    .setting .btn1 {
+        border: 1px solid #d9d9d9;
+        background-color: #fff;
+        border-radius: 100px;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

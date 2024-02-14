@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto:ital@1&display=swap");
+
+.ant-layout {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-image: url("/back_1440.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: #f0f5ff;
+    height: auto;
+    padding: 16px 24px;
+}
+
+@media screen and (max-width: 834px) {
+    .ant-layout {
+        max-width: 834px;
+    }
+    .header-content {
+        max-width: 770px;
+    }
+}
+@media screen and (max-width: 360px) {
+    .ant-layout {
+        max-width: 360px;
+    }
+    .header-content {
+        max-width: 360px;
+    }
+}

@@ -1,0 +1,158 @@
+.sider-bar {
+    background-color: #fff;
+    color: black;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+.ant-btn-text:focus.trigger,
+.ant-btn-text:hover.trigger {
+    background-color: #fff;
+}
+
+.logo-img {
+    max-width: 80%;
+    max-height: 100%;
+}
+.menu-icon svg path {
+    fill: #061178;
+}
+
+.menu-icon {
+    width: 16px;
+    height: 16px;
+}
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 16px;
+    font-style: normal;
+    font-family: "Inter", sans-serif;
+}
+.exit-icon {
+    margin-right: 17px;
+    width: 14px;
+    height: 14px;
+}
+.exit-divide {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    box-shadow: inset 0 1px 0 0 #d9d9d9;
+}
+
+.exit-button {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+}
+.ant-layout-sider {
+    position: relative;
+    min-width: 0;
+    background: #fff;
+    transition: all 0.2s;
+}
+.trigger-col {
+    background-color: #fff;
+    clip-path: polygon(0 0, 100% 21%, 100% 80%, 0 100%);
+    color: #8c8c8c;
+}
+.trigger {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(100%, -50%);
+    height: 66px;
+    width: 20px;
+}
+
+.ant-btn-icon-only {
+    margin-right: 0;
+}
+.ant-btn-icon-only {
+    padding: 2.4px 0;
+    font-size: 16px;
+    border-radius: 2px;
+    vertical-align: -3px;
+}
+
+@media screen and (max-width: 834px) {
+    .sider-bar {
+        width: 100%;
+    }
+
+    .trigger {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(100%, -50%);
+        height: 66px;
+        width: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sider-bar {
+        height: 100vh;
+        position: fixed;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .sider-bar {
+        position: fixed;
+    }
+
+    .trigger {
+        position: absolute;
+        right: 0;
+        top: 50px;
+
+        width: 32px;
+        height: 48px;
+    }
+    .trigger-col {
+        background-color: #fff;
+        clip-path: polygon(0 0, 100% 15%, 100% 83%, 0% 100%);
+        color: #8c8c8c;
+    }
+    .logo-container {
+        height: 50px;
+        margin: 0;
+        padding-top: 5px;
+    }
+    .logo-img {
+        max-width: 80%;
+        max-height: 100%;
+    }
+    .menu-icon {
+        display: none;
+    }
+    .exit-button .exit-icon {
+        display: none;
+    }
+    .exit-button {
+        text-align: center;
+    }
+    .sider-bar.collapsed .exit-button {
+        display: none;
+    }
+    .menu-items {
+        width: 106px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        letter-spacing: -1px;
+    }
+}
