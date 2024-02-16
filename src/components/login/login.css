@@ -1,0 +1,61 @@
+.enter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1440px;
+    height: 100vh;
+    margin: 0 auto;
+    background-image: url("./public/Enter_page_light_blur.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 539px;
+    height: 686px;
+    background-color: white;
+    padding: 64px 32px;
+}
+.form {
+    width: 368px;
+    /*height: 434px;*/
+    height: 100vh;
+    padding: 0 53.5px;
+}
+.logo_cont {
+    width: 309px;
+    height: 76px;
+    align-items: center;
+    justify-content: center;
+    padding: auto;
+}
+
+.login-form-button {
+    width: 100%;
+    height: 40px;
+    background-color: #2f54eb;
+}
+.google {
+    background-color: white;
+}
+.ant-tabs-nav {
+    display: flex;
+    justify-content: space-between;
+}
+.tabs {
+    width: 100%;
+}
+.ant-tabs-tab {
+    flex: 1;
+    align-items: center;
+}
+.ant-tabs-top > .ant-tabs-nav,
+.ant-tabs-bottom > .ant-tabs-nav,
+.ant-tabs-top > div > .ant-tabs-nav,
+.ant-tabs-bottom > div > .ant-tabs-nav {
+    margin: 0 0 24px 0;
+}
