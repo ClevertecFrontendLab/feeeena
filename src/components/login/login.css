@@ -19,12 +19,13 @@
     height: 686px;
     background-color: white;
     padding: 64px 32px;
+    border-radius: 2px;
 }
 .form {
+    justify-content: center;
     width: 368px;
-    /*height: 434px;*/
-    height: 100vh;
-    padding: 0 53.5px;
+    height: 434px;
+    margin: 0 53.5px;
 }
 .logo_cont {
     width: 309px;
@@ -37,25 +38,86 @@
 .login-form-button {
     width: 100%;
     height: 40px;
-    background-color: #2f54eb;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    text-align: center;
 }
 .google {
     background-color: white;
 }
-.ant-tabs-nav {
-    display: flex;
-    justify-content: space-between;
+.login-formforgot {
+    font-weight: 400;
+    font-size: 14px;
 }
 .tabs {
     width: 100%;
+    display: flex;
 }
+.inp {
+    height: 40px;
+}
+
+.ant-form-item-control-input-content {
+    width: 100%;
+}
+.inputs {
+    margin-bottom: 32px;
+}
+.ant-checkbox-checked .ant-checkbox-inner {
+    /*ЦВЕТ ГАЛОЧКИ ЧЕКБОКСА*/
+    background-color: #2f54eb;
+    border-color: #2f54eb;
+}
+
 .ant-tabs-tab {
-    flex: 1;
-    align-items: center;
+    color: black;
 }
-.ant-tabs-top > .ant-tabs-nav,
-.ant-tabs-bottom > .ant-tabs-nav,
-.ant-tabs-top > div > .ant-tabs-nav,
-.ant-tabs-bottom > div > .ant-tabs-nav {
-    margin: 0 0 24px 0;
+
+.ant-tabs-tab.ant-tabs-tab-active {
+    color: #2f54eb;
+}
+.ant-tabs-ink-bar .ant-tabs-ink-bar-animated {
+    background-color: #2f54eb;
+}
+.link_enter {
+    color: "#2F54EB";
+    font-weight: "400";
+    font-size: "16px";
+}
+@media screen and (max-width: 834px) {
+    .enter {
+        max-width: 834px;
+        height: 100vh;
+    }
+    .container {
+        border-radius: 2px;
+        padding: 64px 32px;
+        width: 539px;
+        height: 742px;
+    }
+}
+@media screen and (max-width: 360px) {
+    .enter {
+        max-width: 360px;
+        height: 100vh;
+    }
+    .container {
+        border-radius: 2px;
+        padding: 32px 16px;
+        width: 328px;
+        height: 564px;
+    }
+    .form {
+        width: 100%;
+    }
+    .logo_cont {
+        width: auto;
+        height: auto;
+        max-width: 203px;
+        max-height: 50px;
+    }
+    .link_enter {
+        font-size: "14px";
+    }
 }

@@ -7,7 +7,8 @@ import { store } from '@redux/configure-store';
 
 import 'normalize.css';
 import './index.css';
-import Login from '@components/login/Login';
+/*import Login from '@components/login/Login';*/
+import ErrorYellow from '@components/errorsLog/ErrorYellow';
 /*import MainPage  from './pages/main-page/MainPage';*/
 
 const domNode = document.getElementById('root') as HTMLDivElement;
@@ -18,7 +19,7 @@ root.render(
         <Provider store={store}>
             <HashRouter>
                 <Routes>
-                   <Route path='/' element={<Login />} />
+                    <Route path='/' element={<ErrorYellow />} />
                 </Routes>
             </HashRouter>
         </Provider>
