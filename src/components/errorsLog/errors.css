@@ -15,7 +15,7 @@
     padding: 64px 32px;
     width: 539px;
     height: 345px;
-    background-color: white;
+    background-color: var(--white);
 }
 .error {
     display: flex;
@@ -40,20 +40,20 @@
     font-size: 14px;
     line-height: 130%;
     text-align: center;
-    color: #8c8c8c;
+    color: var(--gray);
     margin: 0;
     padding: 0;
 }
 .error-button {
-    background-color: #2f54eb;
+    background-color: var(--primary-light-blue);
     color: white;
     width: 100%;
-    border: 1px solid #2f54eb;
+    border: 1px solid var(--primary-light-blue);
     border-radius: 2px;
     padding: 4px 15px;
     height: 40px;
 }
-@media screen and (max-width: 834px) {
+@media screen and (max-width: var(--tablet)) {
     .enter {
         max-width: 834px;
         height: 100vh;
@@ -65,7 +65,7 @@
         height: 345px;
     }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: var(--mobile)) {
     .enter {
         max-width: 360px;
         height: 100vh;

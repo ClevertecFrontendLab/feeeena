@@ -8,4 +8,16 @@
 :root {
     min-height: 100vh;
     font-family: "Inter", sans-serif;
+    /*Colors*/
+    --primary-light-blue: #2f54eb;
+    --white: white;
+    --black: black;
+    --gray: #8c8c8c;
+    /*Font*/
+    --fontInter: "Inter", sans-serif;
+    --fontSize: 16;
+    /*SIZE DEVICE*/
+    --mobile: 361px;
+    --tablet: 835px;
+    --pc: 1440px;
 }

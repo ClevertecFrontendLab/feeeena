@@ -17,7 +17,7 @@
     align-items: center;
     width: 539px;
     height: 686px;
-    background-color: white;
+    background-color: var(--white);
     padding: 64px 32px;
     border-radius: 2px;
 }
@@ -44,7 +44,7 @@
     text-align: center;
 }
 .google {
-    background-color: white;
+    background-color: var(--white);
 }
 .login-formforgot {
     font-weight: 400;
@@ -66,26 +66,26 @@
 }
 .ant-checkbox-checked .ant-checkbox-inner {
     /*ЦВЕТ ГАЛОЧКИ ЧЕКБОКСА*/
-    background-color: #2f54eb;
-    border-color: #2f54eb;
+    background-color: var(--primary-light-blue);
+    border-color: var(--primary-light-blue);
 }
 
 .ant-tabs-tab {
-    color: black;
+    color: var(--black);
 }
 
 .ant-tabs-tab.ant-tabs-tab-active {
-    color: #2f54eb;
+    color: var(--primary-light-blue);
 }
 .ant-tabs-ink-bar .ant-tabs-ink-bar-animated {
-    background-color: #2f54eb;
+    background-color: var(--primary-light-blue);
 }
 .link_enter {
-    color: "#2F54EB";
-    font-weight: "400";
-    font-size: "16px";
+    color: var(--primary-light-blue);
+    font-weight: 400;
+    font-size: 16px;
 }
-@media screen and (max-width: 834px) {
+@media screen and (max-width: var(--tablet)) {
     .enter {
         max-width: 834px;
         height: 100vh;
@@ -97,7 +97,7 @@
         height: 742px;
     }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: var(--mobile)) {
     .enter {
         max-width: 360px;
         height: 100vh;
