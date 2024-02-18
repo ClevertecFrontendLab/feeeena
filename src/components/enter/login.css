@@ -1,4 +1,4 @@
-.enter {
+.layout {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,21 +11,16 @@
     background-repeat: no-repeat;
 }
 
-.container {
+.contForm {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     width: 539px;
     height: 686px;
     background-color: var(--white);
     padding: 64px 32px;
     border-radius: 2px;
-}
-.form {
-    justify-content: center;
-    width: 368px;
-    height: 434px;
-    margin: 0 53.5px;
 }
 .logo_cont {
     width: 309px;
@@ -33,6 +28,39 @@
     align-items: center;
     justify-content: center;
     padding: auto;
+}
+.form {
+    justify-content: space-between;
+    width: 368px;
+    height: 434px;
+    margin: 0 53.5px;
+}
+
+.inputs {
+    margin-bottom: 32px;
+}
+.remember_forgot {
+    font-weight: 400;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    margin-bottom: 0;
+    padding-top: 0;
+}
+.rememberMe {
+    font-weight: 400;
+    margin: 0;
+}
+.ant-checkbox-checked .ant-checkbox-inner {
+    /*ЦВЕТ ГАЛОЧКИ ЧЕКБОКСА*/
+    background-color: var(--primary-light-blue);
+    border-color: var(--primary-light-blue);
+}
+.link_enter {
+    color: var(--primary-light-blue);
+    font-weight: 400;
+    font-size: 16px;
 }
 
 .login-form-button {
@@ -43,66 +71,38 @@
     line-height: 130%;
     text-align: center;
 }
-.google {
-    background-color: var(--white);
-}
-.login-formforgot {
-    font-weight: 400;
-    font-size: 14px;
-}
-.tabs {
-    width: 100%;
-    display: flex;
-}
-.inp {
-    height: 40px;
-}
 
-.ant-form-item-control-input-content {
+/*.ant-form-item-control-input-content {//хз че это
     width: 100%;
-}
-.inputs {
-    margin-bottom: 32px;
-}
-.ant-checkbox-checked .ant-checkbox-inner {
-    /*ЦВЕТ ГАЛОЧКИ ЧЕКБОКСА*/
-    background-color: var(--primary-light-blue);
-    border-color: var(--primary-light-blue);
-}
-
-.ant-tabs-tab {
+}*/
+/*.ant-tabs-tab {
     color: var(--black);
 }
-
-.ant-tabs-tab.ant-tabs-tab-active {
+/*.ant-tabs-tab.ant-tabs-tab-active {
     color: var(--primary-light-blue);
 }
 .ant-tabs-ink-bar .ant-tabs-ink-bar-animated {
     background-color: var(--primary-light-blue);
-}
-.link_enter {
-    color: var(--primary-light-blue);
-    font-weight: 400;
-    font-size: 16px;
-}
-@media screen and (max-width: var(--tablet)) {
-    .enter {
+}*/
+
+@media screen and (max-width: 834px) {
+    .layout {
         max-width: 834px;
         height: 100vh;
     }
-    .container {
+    .contForm {
         border-radius: 2px;
         padding: 64px 32px;
         width: 539px;
         height: 742px;
     }
 }
-@media screen and (max-width: var(--mobile)) {
-    .enter {
+@media screen and (max-width: 360px) {
+    .layout {
         max-width: 360px;
         height: 100vh;
     }
-    .container {
+    .contForm {
         border-radius: 2px;
         padding: 32px 16px;
         width: 328px;

@@ -4,10 +4,11 @@ import './errors.css';
 
 import { ErrorType } from '../configFile/errors.tsx';
 import { images } from '../configFile/images.tsx';
+import LayoutEnter from '@constants/layoutEnter.tsx';
 
 const ErrorYellow: React.FC = () => {
     return (
-        <div className='enter'>
+        <LayoutEnter>
             <div className='err_cont'>
                 <div className='error'>
                     <div className='error_icon_cont'>
@@ -21,7 +22,7 @@ const ErrorYellow: React.FC = () => {
                     <Button className='error-button'>{ErrorType.FAILED_REPEAT}</Button>
                 </div>
             </div>
-        </div>
+        </LayoutEnter>
     );
 };
 
