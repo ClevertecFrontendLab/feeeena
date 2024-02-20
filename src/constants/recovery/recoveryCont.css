@@ -1,0 +1,7 @@
+.recovery_cont {
+    border-radius: 2px;
+    padding: 64px 32px 56px 32px;
+    width: 539px;
+    height: 428px;
+    background-color: var(--white);
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import '@components/errorsLog/errors.css';
-import '@components/passRecovery/passRecovery.css';
+import '@constants/recovery/recoveryCont.css';
 
 interface RecoveryContProps {
     children: React.ReactNode;

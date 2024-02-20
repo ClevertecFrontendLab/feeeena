@@ -11,7 +11,7 @@ import { Enter } from '@pages/enter-page/EnterPage';
 import { pathAuth } from '@components/configFile/path.tsx';
 import Error from '@components/errorsLog/Error';
 import MainPage from '@pages/main-page/MainPage';
-import PassRec505 from '@components/errorsLog/err505/passRec505.tsx';
+import PassRecForm from '@components/passRecovery/passRecForm/passRecForm';
 
 const domNode = document.getElementById('root') as HTMLDivElement;
 const root = createRoot(domNode);
@@ -21,7 +21,7 @@ root.render(
         <Provider store={store}>
             <HashRouter>
                 <Routes>
-                    <Route path='/' element={<PassRec505 />} />
+                    <Route path='/' element={<PassRecForm />} />
                     {/*<Route path={pathAuth.ENTER} element={<Enter />} />
                     <Route path={pathAuth.MAIN} element={<MainPage />} />
                     <Route

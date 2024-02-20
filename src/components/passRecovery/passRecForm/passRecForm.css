@@ -1,0 +1,35 @@
+.recovery_content_form {
+    border-radius: 2px;
+    padding: 64px 32px;
+    width: 539px;
+    height: 419px;
+    background-color: var(--white);
+}
+.recovery_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 53.3px;
+    padding-right: 53.3px;
+}
+
+.title_rec {
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 200%;
+    margin-bottom: 32px;
+}
+@media screen and (max-width: 360px) {
+    .recovery_content_form {
+        border-radius: 2px;
+        padding: 32px 16px;
+        width: 328px;
+        height: 386px;
+        background-color: var(--white);
+    }
+    .recovery_form {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
