@@ -10,4 +10,5 @@ export enum EnterText {
     NEW_PASS = 'Новый пароль',
     PASS_RE = 'Повторите пароль',
     SAVE = 'Сохранить',
+    PASS_I = 'Пароль',
 }

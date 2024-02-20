@@ -13,7 +13,7 @@ const Login = () => {
                 <Form.Item name='password'>
                     <Input.Password
                         size='large'
-                        placeholder='Пароль'
+                        placeholder={EnterText.PASS_I}
                         iconRender={(visible) =>
                             visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
                         }

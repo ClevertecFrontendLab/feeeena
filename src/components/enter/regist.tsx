@@ -27,7 +27,7 @@ const Registration = () => {
                 >
                     <Input.Password
                         size='large'
-                        placeholder='Пароль'
+                        placeholder={EnterText.PASS_I}
                         iconRender={(visible) =>
                             visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
                         }
@@ -37,7 +37,7 @@ const Registration = () => {
                 <Form.Item name='password'>
                     <Input.Password
                         size='large'
-                        placeholder='Повторите пароль'
+                        placeholder={EnterText.PASS_RE}
                         iconRender={(visible) =>
                             visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
                         }
