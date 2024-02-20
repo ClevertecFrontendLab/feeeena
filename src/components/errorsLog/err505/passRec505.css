@@ -1,0 +1,55 @@
+.err_505_cont {
+    border-radius: 2px;
+    padding: 64px 32px 56px 32px;
+    width: 539px;
+    height: 550px;
+    background-color: var(--white);
+}
+.err_505_inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.img_cont {
+    margin-bottom: 20px;
+}
+.text_cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    padding: 0;
+    margin: 0;
+}
+.text_cont h1 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 130%;
+    text-align: center;
+}
+
+.text_cont p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    text-align: center;
+    color: var(--gray);
+}
+.button_err_505 {
+    background-color: var(--primary-light-blue);
+    color: white;
+    border: 1px solid var(--primary-light-blue);
+    border-radius: 2px;
+    padding: 4px 15px;
+    height: 40px;
+}
+@media screen and (max-width: 360px) {
+    .err_505_cont {
+        border-radius: 2px;
+        padding: 64px 32px 56px 32px;
+        width: 328px;
+        height: 568px;
+    }
+}

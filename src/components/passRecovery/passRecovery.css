@@ -70,3 +70,14 @@
     text-align: center;
     color: var(--gray);
 }
+@media screen and (max-width: 360px) {
+    .recovery_cont {
+        border-radius: 2px;
+        padding: 32px 25px;
+        width: 328px;
+        height: 457px;
+        background-color: var(--white);
+    }
+    .subtitle_rec {
+    }
+}

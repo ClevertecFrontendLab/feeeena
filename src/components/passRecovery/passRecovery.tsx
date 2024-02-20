@@ -30,6 +30,7 @@ const PassRecovery: React.FC = () => {
                             </h1>
                             <p>
                                 Мы отправили вам на e-mail <span className='email'>{email}</span>{' '}
+                                <br />
                                 шестизначный код. Введите его в поле ниже.
                             </p>
                         </div>
