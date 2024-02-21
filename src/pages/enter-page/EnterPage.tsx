@@ -3,8 +3,8 @@ import '@components/enter/login.css';
 
 import { useNavigate } from 'react-router-dom';
 
-import LayoutEnter from '@constants/layoutEnter.tsx';
-import ContForm from '@constants/form/contForm';
+import LayoutEnter from '@constants/layoutEnter/layoutEnter';
+import ContForm from '@constants/form/contForm/contForm';
 import FormEl from '@constants/form/formEl';
 
 import TabsEnter from '@components/enter/tabsEnter';
@@ -13,18 +13,21 @@ import LogoEnetr from '@components/enter/logoEnter';
 export const Enter: React.FC = () => {
     const navigate = useNavigate();
 
-    const handleLoginSuccess = () => {
-        navigate('/main');
-    };
+    const handleLogin = async () => {
+        
 
-    const handleLoginError = () => {
-        navigate('/error');
+        if () {
+            navigate('/main'); 
+        } else {
+            
+            navigate('/login-error');
+        }
     };
     return (
         <LayoutEnter>
             <ContForm>
                 <LogoEnetr />
-                <FormEl onLoginSuccess={handleLoginSuccess} onLoginError={handleLoginError}>
+                <FormEl {/*onLoginSuccess={handleLoginSuccess} onLoginError={handleLoginError}*/} >
                     <TabsEnter />
                 </FormEl>
             </ContForm>

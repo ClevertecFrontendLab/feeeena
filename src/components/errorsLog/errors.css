@@ -53,7 +53,7 @@
     padding: 4px 15px;
     height: 40px;
 }
-@media screen and (max-width: var(--tablet)) {
+@media screen and (max-width: 834px) {
     .enter {
         max-width: 834px;
         height: 100vh;
@@ -65,7 +65,7 @@
         height: 345px;
     }
 }
-@media screen and (max-width: var(--mobile)) {
+@media screen and (max-width: 360px) {
     .enter {
         max-width: 360px;
         height: 100vh;

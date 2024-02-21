@@ -1,5 +1,5 @@
 import React from 'react';
-import '@components/enter/login.css';
+import '@constants/layoutEnter/layoutEnter.css';
 interface LayoutProps {
     children: React.ReactNode;
 }

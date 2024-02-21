@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'antd';
-import LayoutEnter from '@constants/layoutEnter.tsx';
+import LayoutEnter from '@constants/layoutEnter/layoutEnter';
+import { ErrorsRec } from '@components/configFile/errorRec.tsx';
 import './passRec505.css';
 
 const PassRec505: React.FC = () => {
@@ -12,10 +13,10 @@ const PassRec505: React.FC = () => {
                         <img src='./public/image.png' alt='img' />
                     </div>
                     <div className='text_cont'>
-                        <h1>Что-то пошло не так</h1>
-                        <p>Произошла ошибка, попробуйте отправить форму ещё раз.</p>
+                        <h1>{ErrorsRec.SMTH_HAPP}</h1>
+                        <p>{ErrorsRec.SMTH_HAPP_MESSAGE}</p>
                     </div>
-                    <Button className='button_err_505'>Назад</Button>;
+                    <Button className='button_err_505'>{ErrorsRec.BACK}</Button>;
                 </div>
             </div>
         </LayoutEnter>

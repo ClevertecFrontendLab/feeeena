@@ -72,3 +72,7 @@
         background-color: var(--white);
     }
 }
+.custom-input:focus {
+    border-color: #2f54eb;
+    outline: none;
+}

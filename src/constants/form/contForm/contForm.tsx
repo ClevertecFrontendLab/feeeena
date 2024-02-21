@@ -1,5 +1,6 @@
 import React from 'react';
-import '@components/enter/login.css';
+import '@constants/form/contForm/contForm.css';
+
 interface ContForm {
     children: React.ReactNode;
 }

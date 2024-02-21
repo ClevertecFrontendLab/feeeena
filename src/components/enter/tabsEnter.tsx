@@ -5,7 +5,14 @@ import Login from '@components/enter/login';
 import Registration from '@components/enter/regist';
 const TabsEnter = () => {
     return (
-        <Tabs centered>
+        <Tabs
+            centered
+            tabBarStyle={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+            }}
+        >
             <Tabs.TabPane tab='Вход' key='1'>
                 <Login />
             </Tabs.TabPane>

@@ -52,13 +52,6 @@ const getErrorDetails = (errorType: string): ErrorDetails => {
                 buttonLabel: 'Повторить',
                 icon: '@public/Red.png',
             };
-        case 'rec-error':
-            return {
-                title: 'Что-то пошло не так',
-                message: 'Произошла ошибка, попробуйте отправить форму ещё раз.',
-                buttonLabel: 'Назад',
-                icon: '@public/image.png',
-            };
         default:
             return {
                 title: 'Неизвестная ошибка',

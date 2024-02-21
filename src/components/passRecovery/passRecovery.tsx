@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import { message, Input } from 'antd';
-import LayoutEnter from '@constants/layoutEnter.tsx';
-
+import LayoutEnter from '@constants/layoutEnter/layoutEnter';
+import '@components/passRecovery/passRecovery.css';
 import RecoveryCont from '@constants/recovery/recoveryCont';
 
 const PassRecovery: React.FC = () => {

@@ -11,7 +11,7 @@ import { Enter } from '@pages/enter-page/EnterPage';
 import { pathAuth } from '@components/configFile/path.tsx';
 import Error from '@components/errorsLog/Error';
 import MainPage from '@pages/main-page/MainPage';
-import PassRecForm from '@components/passRecovery/passRecForm/passRecForm';
+import ErrEmail from '@components/errorsLog/errEmail/errEmail.tsx';
 
 const domNode = document.getElementById('root') as HTMLDivElement;
 const root = createRoot(domNode);
@@ -21,14 +21,13 @@ root.render(
         <Provider store={store}>
             <HashRouter>
                 <Routes>
-                    <Route path='/' element={<PassRecForm />} />
-                    {/*<Route path={pathAuth.ENTER} element={<Enter />} />
+                    <Route path={pathAuth.ENTER} element={<Enter />} />
                     <Route path={pathAuth.MAIN} element={<MainPage />} />
                     <Route
                         path={pathAuth.LOGIN_ERROR}
                         element={<Error errorType='login-error' />}
-                    />*/}
-                    {/*<Route
+                    />
+                    <Route
                         path={pathAuth.SAVE_DATA_ERROR_EMAIL}
                         element={<Error errorType='save-data-error-email' />}
                     />
@@ -47,7 +46,8 @@ root.render(
                     <Route
                         path={pathAuth.CHANGE_PASS_ERROR}
                         element={<Error errorType='change-pass-error' />}
-/>*/}
+                    />
+                    *
                 </Routes>
             </HashRouter>
         </Provider>

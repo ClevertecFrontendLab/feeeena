@@ -3,7 +3,7 @@ import React from 'react';
 import { Input, Form, Button } from 'antd';
 import { EyeTwoTone, EyeInvisibleOutlined } from '@ant-design/icons';
 
-import LayoutEnter from '@constants/layoutEnter.tsx';
+import LayoutEnter from '@constants/layoutEnter/layoutEnter';
 
 import '@components/passRecovery/passRecForm/passRecForm.css';
 import { EnterText } from '../../configFile/enterText';
