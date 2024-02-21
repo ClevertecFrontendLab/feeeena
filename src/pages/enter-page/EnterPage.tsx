@@ -11,23 +11,11 @@ import TabsEnter from '@components/enter/tabsEnter';
 import LogoEnetr from '@components/enter/logoEnter';
 
 export const Enter: React.FC = () => {
-    const navigate = useNavigate();
-
-    const handleLogin = async () => {
-        
-
-        if () {
-            navigate('/main'); 
-        } else {
-            
-            navigate('/login-error');
-        }
-    };
     return (
         <LayoutEnter>
             <ContForm>
                 <LogoEnetr />
-                <FormEl {/*onLoginSuccess={handleLoginSuccess} onLoginError={handleLoginError}*/} >
+                <FormEl>
                     <TabsEnter />
                 </FormEl>
             </ContForm>

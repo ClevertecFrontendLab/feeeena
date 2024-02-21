@@ -97,39 +97,3 @@
         font-size: "14px";
     }
 }
-.ant-input:focus,
-.ant-input:hover {
-    border-color: var(--primary-light-blue);
-
-    outline: none;
-}
-
-.ant-input-password:focus,
-.ant-input-password:hover {
-    border-color: var(--primary-light-blue);
-    box-shadow: 0 0 0 1px var(--primary-light-blue);
-    outline: none;
-}
-
-.login-form-button:focus,
-.login-form-button:hover {
-    border-color: var(--primary-light-blue);
-    color: var(--primary-light-blue);
-    outline: none;
-}
-.ant-tabs-nav-list {
-    display: flex;
-    justify-content: center;
-}
-
-.ant-tabs-tab {
-    flex: 0 1 auto;
-    text-align: center;
-}
-
-.ant-tabs-tab-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}

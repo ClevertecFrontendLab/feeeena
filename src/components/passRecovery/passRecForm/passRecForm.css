@@ -20,6 +20,12 @@
     line-height: 200%;
     margin-bottom: 32px;
 }
+.password {
+    margin-bottom: 48px;
+}
+.confirmPassword {
+    margin-bottom: 32px;
+}
 @media screen and (max-width: 360px) {
     .recovery_content_form {
         border-radius: 2px;
