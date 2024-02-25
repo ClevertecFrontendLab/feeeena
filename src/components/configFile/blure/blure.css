@@ -1,0 +1,29 @@
+/* .layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1440px;
+    height: 100vh;
+    margin: 0 auto;
+    background-image: url("./public/blure_light.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+} */
+
+.blure{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 100;
+
+    backdrop-filter: blur(5px);
+    background-color:rgba(121, 156, 212, 0.5);
+}

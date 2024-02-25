@@ -1,6 +1,6 @@
 import React from 'react';
 import '@components/errorsLog/errors.css';
-import getErrorDetails from '@components/configFile/getError.ts';
+import getErrorDetails from '@components/configFile/result/getError';
 
 interface ErrorIconProps {
     errorType: string;

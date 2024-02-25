@@ -1,8 +1,8 @@
 import React from 'react';
 
 import LayoutEnter from '@constants/layoutEnter/layoutEnter';
-import ErrCont from '@constants/errorss/errCont.tsx';
-import ErrorInner from '@constants/errorss/errorInner.tsx';
+import ErrCont from '@constants/errorss/errCont/errCont.tsx';
+import ErrorInner from '@constants/errorss/errInner/errorInner.tsx';
 import ErrorIcon from '@constants/errorss/errorIcon.tsx';
 import ErrorMessage from '@constants/errorss/errorMesage.tsx';
 import ErrorButton from '@constants/errorss/errButton';

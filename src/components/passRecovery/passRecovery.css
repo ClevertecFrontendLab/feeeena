@@ -35,44 +35,48 @@
 }
 .group_inputs {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    width: 300px;
     margin-bottom: 10px;
 }
 
-.custom-input {
-    border: 1px solid var(--grayBorder);
-    border-radius: 2px;
-    padding: 5px 12px;
-    width: 40px;
+.container-verif {
+    margin-bottom: 22px;
     height: 40px;
+    gap: 12px;
 }
 
-.custom-input:not(:first-child) {
-    margin-left: 12px;
-}
-
-.ant-input-group .ant-input {
-    width: 40px;
-}
-.subtitle_rec {
-    font-weight: 400;
+.character-verif {
+    border-color: rgb(217, 217, 217);
+    border-radius: 2px;
     font-size: 14px;
-    line-height: 130%;
-    text-align: center;
-    color: var(--gray);
+    line-height: 40px;
+    color: rgb(38, 38, 38);
 }
+
+.character--error {
+    border-color: red;
+}
+
+.character--inactive {
+    background-color: transparent;
+}
+
+@media screen and (max-width: 480px) {
+    .container-verif {
+        gap: 8px;
+        width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 @media screen and (max-width: 360px) {
     .recovery_cont {
         border-radius: 2px;
-        padding: 32px 25px;
-        width: 328px;
-        height: 457px;
+        padding: 32px !important;
+        max-width: 328px;
+        height: auto !important;
         background-color: var(--white);
     }
-}
-.custom-input:focus {
-    border-color: #2f54eb;
-    outline: none;
 }

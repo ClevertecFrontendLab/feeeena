@@ -4,21 +4,19 @@
 @import "@components/header/header.css";
 @import "@components/content/content.css";
 @import "@pages/main-page/mainPage.css";
-
+@import "@components/enter/login.css";
+@import "@components/loader/loader.css";
+@import "@components/configFile/blure/blure.css";
 :root {
     min-height: 100vh;
     font-family: "Inter", sans-serif;
-    /*Colors*/
+
     --primary-light-blue: #2f54eb;
     --white: white;
     --black: black;
     --gray: #8c8c8c;
     --grayBorder: #bfbfbf;
-    /*Font*/
     --fontInter: "Inter", sans-serif;
     --fontSize: 16;
-    /*SIZE DEVICE*/
-    --mobile: 361px;
-    --tablet: 835px;
-    --pc: 1440px;
+    --antd-wave-shadow-color: #2f54eb !important;
 }

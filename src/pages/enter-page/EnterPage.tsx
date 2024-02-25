@@ -1,22 +1,22 @@
 import React from 'react';
 import '@components/enter/login.css';
 
-import { useNavigate } from 'react-router-dom';
-
 import LayoutEnter from '@constants/layoutEnter/layoutEnter';
 import ContForm from '@constants/form/contForm/contForm';
 import FormEl from '@constants/form/formEl';
 
-import TabsEnter from '@components/enter/tabsEnter';
-import LogoEnetr from '@components/enter/logoEnter';
+import { TabsEnter } from '@components/enter/tabsEnter';
+import { LogoEnter } from '@components/enter/logoEnter';
+import Login from '@components/enter/login';
 
-export const Enter: React.FC = () => {
+export const EnterPage: React.FC = () => {
     return (
         <LayoutEnter>
             <ContForm>
-                <LogoEnetr />
+                <LogoEnter />
                 <FormEl>
                     <TabsEnter />
+                    <Login />
                 </FormEl>
             </ContForm>
         </LayoutEnter>

@@ -1,45 +1,80 @@
 import { Form, Input, Button } from 'antd';
 import { useState } from 'react';
-import { EyeTwoTone, EyeInvisibleOutlined, GooglePlusOutlined } from '@ant-design/icons';
-import '@components/enter/login.css';
+import { GooglePlusOutlined } from '@ant-design/icons';
+
 import { EnterText } from '../configFile/enterText';
+import { regExp } from '@constants/regExp';
+import { useRegisterMutation } from '@redux/api/session/apiSession';
+import { RequestRegister } from '@redux/api/session/types';
+import { useAppDispatch } from '@hooks/typed-react-redux-hooks';
 
-interface FormValues {
-    email: string;
-    password: string;
-    confirmPassword: string;
-}
+import { sessionActions } from '@store/slice/session';
 
-const validateEmail = (_: any, value: string) => {
-    if (!value || value.endsWith('.com') || value.endsWith('.ru')) {
-        return Promise.resolve();
-    }
-    return Promise.reject('');
-};
+import { responseResultRegister } from './responseResultRegister';
 
-const validatePassword = (_: any, value: string) => {
-    if (value.length >= 8 && /^(?=.*[A-Z])(?=.*\d)/.test(value)) {
-        return Promise.resolve();
-    }
-    return Promise.reject('');
-};
+// interface FormValues {
+//     email: string;
+//     password: string;
+//     confirmPassword: string;
+// }
 
-const Registration = () => {
+// const validateEmail = (_: any, value: string) => {
+//     if (!value || value.endsWith('.com') || value.endsWith('.ru')) {
+//         return Promise.resolve();
+//     }
+//     return Promise.reject('');
+// };
+
+// const validatePassword = (_: any, value: string) => {
+//     if (value.length >= 8 && /^(?=.*[A-Z])(?=.*\d)/.test(value)) {
+//         return Promise.resolve();
+//     }
+//     return Promise.reject('');
+// };
+
+export const Registration = () => {
     const [isButtonDisabled, setButtonDisabled] = useState(false);
-    const [isFormValid, setFormValid] = useState(true);
     const [form] = Form.useForm();
+    const [register] = useRegisterMutation();
+    const dispatch = useAppDispatch();
 
-    const onFinish = (values: FormValues) => {
-        console.log('Отправленные данные:', values);
-        const { email, password, confirmPassword } = values;
-        if (!email || !password || !confirmPassword || password !== confirmPassword) {
-            setFormValid(false);
+    const validForm = () => {
+        const email = form.getFieldValue('email');
+        const password = form.getFieldValue('password');
+        const passwordConfirm = form.getFieldValue('confirmPassword');
+
+        if (
+            regExp.email.test(email) &&
+            regExp.password.test(password) &&
+            password === passwordConfirm
+        ) {
+            setButtonDisabled(false);
+        } else {
             setButtonDisabled(true);
-            return;
         }
-        setFormValid(true);
-        setButtonDisabled(false);
     };
+
+    const onFinish = ({ email, password }: RequestRegister) => {
+        dispatch(sessionActions.setIsLoading(true));
+        register({ email, password }).then((result) => {
+            sessionStorage.setItem('email', email);
+            sessionStorage.setItem('password', password);
+
+            responseResultRegister(result, dispatch);
+        });
+    };
+
+    // const onFinish = (values: FormValues) => {
+    //     console.log('Отправленные данные:', values);
+    //     const { email, password, confirmPassword } = values;
+    //     if (!email || !password || !confirmPassword || password !== confirmPassword) {
+    //         setFormValid(false);
+    //         setButtonDisabled(true);
+    //         return;
+    //     }
+    //     setFormValid(true);
+    //     setButtonDisabled(false);
+    // };
 
     return (
         <Form
@@ -47,50 +82,46 @@ const Registration = () => {
             name='normal_login'
             initialValues={{ remember: true }}
             onFinish={onFinish}
+            onChange={validForm}
             form={form}
         >
             <div className='inputs'>
                 <Form.Item
                     name='email'
-                    rules={[{ required: true }, { type: 'email' }, { validator: validateEmail }]}
-                    validateStatus={
-                        isButtonDisabled && !form.getFieldValue('email') ? 'error' : undefined
-                    }
+                    rules={[{ required: true }, { pattern: regExp.email, message: '' }]}
                     help={''}
+                    
                 >
-                    <Input addonBefore='e-mail:' size='large' />
+                    <Input addonBefore='e-mail:' size='large' data-test-id='registration-email'
+/>
                 </Form.Item>
 
                 <Form.Item
                     name='password'
-                    rules={[{ required: true }, { validator: validatePassword }]}
+                    rules={[
+                        {
+                            required: true,
+                            message: '',
+                        },
+                        {
+                            pattern: regExp.password,
+                            message: 'Пароль не менее 8 символов, с заглавной буквой и цифрой',
+                        },
+                    ]}
                     help={
                         <div
                             style={{
                                 fontSize: '12px',
-                                margin: '0px',
-                                padding: '0px',
+                                margin: '0',
+                                padding: '0',
                             }}
                         >
                             {EnterText.PASS}
                         </div>
                     }
-                    validateStatus={
-                        isButtonDisabled &&
-                        (!form.getFieldValue('password') ||
-                            form.getFieldValue('password') !==
-                                form.getFieldValue('confirmPassword'))
-                            ? 'error'
-                            : undefined
-                    }
                 >
-                    <Input.Password
-                        size='large'
-                        placeholder={EnterText.PASS_I}
-                        iconRender={(visible) =>
-                            visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
-                        }
-                    />
+                    <Input.Password size='large' placeholder={EnterText.PASS_I}  data-test-id='registration-password'
+/>
                 </Form.Item>
 
                 <Form.Item
@@ -109,13 +140,8 @@ const Registration = () => {
                         }),
                     ]}
                 >
-                    <Input.Password
-                        size='large'
-                        placeholder={EnterText.PASS_RE}
-                        iconRender={(visible) =>
-                            visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
-                        }
-                    />
+                    <Input.Password size='large' placeholder={EnterText.PASS_RE} data-test-id='registration-confirm-password'
+/>
                 </Form.Item>
             </div>
 
@@ -124,12 +150,10 @@ const Registration = () => {
                     size='large'
                     type='primary'
                     htmlType='submit'
-                    className='login-form-button'
-                    style={{
-                        marginBottom: '16px',
-                        background: '#2F54EB',
-                    }}
-                    disabled={!isFormValid}
+                    className='login-form-button button-submit '
+                    disabled={isButtonDisabled}
+                    data-test-id='registration-submit-button'
+
                 >
                     {EnterText.ENTER}
                 </Button>
@@ -150,4 +174,4 @@ const Registration = () => {
     );
 };
 
-export default Registration;
+// export default Registration;

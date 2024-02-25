@@ -1,37 +1,31 @@
 import React from 'react';
 import { Input, Form, Button } from 'antd';
-import { EyeTwoTone, EyeInvisibleOutlined } from '@ant-design/icons';
+
 import LayoutEnter from '@constants/layoutEnter/layoutEnter';
 import '@components/passRecovery/passRecForm/passRecForm.css';
 import { EnterText } from '../../configFile/enterText';
+import { useAppDispatch } from '@hooks/typed-react-redux-hooks';
+import { RequestChangePassword } from '@redux/api/session/types';
+import { useChangePasswordMutation } from '@redux/api/session/apiSession';
 
-interface FormValues {
-    password: string;
-    confirmPassword: string;
-}
+import { regExp } from '@constants/regExp';
+import { sessionActions } from '@store/slice/session.ts';
+import { responseResultChangePassword } from './responseResultChangePassword';
 
 const PassRecForm: React.FC = () => {
-    const [isButtonDisabled, setButtonDisabled] = React.useState(false);
-    const [isFormValid, setFormValid] = React.useState(true);
     const [form] = Form.useForm();
+    const dispatch = useAppDispatch();
+    const [changePassword] = useChangePasswordMutation();
 
-    const onFinish = (values: FormValues) => {
-        console.log('Отправленные данные:', values);
-        const { password, confirmPassword } = values;
-        if (!password || !confirmPassword || password !== confirmPassword) {
-            setFormValid(false);
-            setButtonDisabled(true);
-            return;
-        }
-        setFormValid(true);
-        setButtonDisabled(false);
-    };
+    const onFinish = ({ password, confirmPassword }: RequestChangePassword) => {
+        dispatch(sessionActions.setIsLoading(true));
 
-    const validatePassword = (_: any, value: string) => {
-        if (value.length >= 8 && /^(?=.*[A-Z])(?=.*\d)/.test(value)) {
-            return Promise.resolve();
-        }
-        return Promise.reject('');
+        changePassword({ password, confirmPassword }).then((result) => {
+            sessionStorage.setItem('password', password);
+            sessionStorage.setItem('confirmPassword', confirmPassword);
+
+            responseResultChangePassword(result, dispatch);
+        });
     };
 
     return (
@@ -51,33 +45,33 @@ const PassRecForm: React.FC = () => {
                         <Form.Item
                             name='password'
                             className='password'
-                            rules={[{ required: true }, { validator: validatePassword }]}
+                            rules={[
+                                {
+                                    required: true,
+                                    message: '',
+                                },
+                                {
+                                    pattern: regExp.password,
+                                    message:
+                                        'Пароль не менее 8 символов, с заглавной буквой и цифрой',
+                                },
+                            ]}
                             help={
                                 <div
                                     style={{
                                         fontSize: '12px',
-                                        margin: '0px',
-                                        padding: '0px',
+                                        margin: '0',
+                                        padding: '0',
                                     }}
                                 >
                                     {EnterText.PASS}
                                 </div>
                             }
-                            validateStatus={
-                                isButtonDisabled &&
-                                (!form.getFieldValue('password') ||
-                                    form.getFieldValue('password') !==
-                                        form.getFieldValue('confirmPassword'))
-                                    ? 'error'
-                                    : undefined
-                            }
                         >
                             <Input.Password
                                 size='large'
                                 placeholder={EnterText.NEW_PASS}
-                                iconRender={(visible) =>
-                                    visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
-                                }
+                                data-test-id='change-password'
                             />
                         </Form.Item>
                         <Form.Item
@@ -95,21 +89,11 @@ const PassRecForm: React.FC = () => {
                                     },
                                 }),
                             ]}
-                            validateStatus={
-                                isButtonDisabled &&
-                                (!form.getFieldValue('password') ||
-                                    form.getFieldValue('password') !==
-                                        form.getFieldValue('confirmPassword'))
-                                    ? 'error'
-                                    : undefined
-                            }
                         >
                             <Input.Password
                                 size='large'
                                 placeholder={EnterText.PASS_RE}
-                                iconRender={(visible) =>
-                                    visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
-                                }
+                                data-test-id='change-confirm-password'
                             />
                         </Form.Item>
                     </div>
@@ -123,7 +107,7 @@ const PassRecForm: React.FC = () => {
                                 background: '#2F54EB',
                                 width: '100%',
                             }}
-                            disabled={!isFormValid}
+                            data-test-id='change-submit-button'
                         >
                             {EnterText.SAVE}
                         </Button>

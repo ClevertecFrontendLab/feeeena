@@ -1,26 +1,43 @@
 import '@components/enter/login.css';
 
 import { Tabs } from 'antd';
-import Login from '@components/enter/login';
-import Registration from '@components/enter/regist';
-const TabsEnter = () => {
+
+import { authPath } from '@components/configFile/authPath';
+import { useLocation } from 'react-router-dom';
+import { push } from 'redux-first-history';
+import { useAppDispatch } from '@hooks/index';
+
+const tabsAuthConfig = [
+    {
+        key: `${authPath.LOGIN}`,
+        tab: 'Вход',
+    },
+    {
+        key: `${authPath.REGISTER}`,
+        tab: 'Регистрация',
+    },
+];
+
+export const TabsEnter = () => {
+    const { pathname } = useLocation();
+    const dispatch = useAppDispatch();
+
+    const onTabClick = (activeKey: string) => {
+        if (pathname !== activeKey) {
+            dispatch(push(activeKey));
+        }
+    };
+
     return (
         <Tabs
+            defaultActiveKey={pathname}
             centered
-            tabBarStyle={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-            }}
-        >
-            <Tabs.TabPane tab='Вход' key='1'>
-                <Login />
-            </Tabs.TabPane>
-            <Tabs.TabPane tab='Регистрация' key='2'>
-                <Registration />
-            </Tabs.TabPane>
-        </Tabs>
+            onTabClick={onTabClick}
+            items={tabsAuthConfig.map((tab) => ({
+                label: tab.tab,
+                key: tab.key,
+            }))}
+            className='tabs_cont'
+        />
     );
 };
-
-export default TabsEnter;

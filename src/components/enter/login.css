@@ -29,7 +29,6 @@
     margin: 0;
 }
 .ant-checkbox-checked .ant-checkbox-inner {
-    /*ЦВЕТ ГАЛОЧКИ ЧЕКБОКСА*/
     background-color: var(--primary-light-blue);
     border-color: var(--primary-light-blue);
 }
@@ -37,6 +36,7 @@
     color: var(--primary-light-blue);
     font-weight: 400;
     font-size: 16px;
+    width: 50%;
 }
 
 .login-form-button {
@@ -47,20 +47,56 @@
     line-height: 130%;
     text-align: center;
 }
-
-/*.ant-form-item-control-input-content {//хз че это
-    width: 100%;
-}*/
-/*.ant-tabs-tab {
-    color: var(--black);
+.ant-btn.ant-btn-block {
+    width: auto;
 }
-/*.ant-tabs-tab.ant-tabs-tab-active {
+
+.button-submit {
+    margin-bottom: 16px;
+    background: #2f54eb;
+}
+.ant-tabs-top .ant-tabs-nav {
+    margin-bottom: 14px;
+}
+
+.ant-tabs-nav-list {
+    width: 100%;
+}
+
+.ant-tabs-tab + .ant-tabs-tab {
+    margin: 0;
+}
+
+.ant-tabs-tab {
+    padding: 15.5px 0;
+    flex: 50%;
+    justify-content: center;
+    /*color: var(--primary-light-blue);*/
+    font-size: 16px;
+    line-height: 130%;
+}
+.ant-tabs-tab:hover {
     color: var(--primary-light-blue);
 }
-.ant-tabs-ink-bar .ant-tabs-ink-bar-animated {
-    background-color: var(--primary-light-blue);
-}*/
-
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: var(--primary-light-blue);
+    text-shadow: 0 0 0.25px currentcolor;
+}
+.ant-tabs-tab-btn:focus,
+.ant-tabs-tab-remove:focus,
+.ant-tabs-tab-btn:active,
+.ant-tabs-tab-remove:active {
+    color: var(--primary-light-blue);
+}
+.ant-tabs-ink-bar {
+    position: absolute;
+    background: var(--primary-light-blue);
+    pointer-events: none;
+}
+::selection {
+    color: #fff;
+    background: var(--primary-light-blue);
+}
 @media screen and (max-width: 834px) {
     .layout {
         max-width: 834px;
