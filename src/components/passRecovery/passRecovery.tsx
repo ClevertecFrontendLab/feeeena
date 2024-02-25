@@ -7,7 +7,7 @@ import clsn from 'classnames';
 
 import { authPath } from '@components/configFile/authPath';
 import VerificationInput from 'react-verification-input';
-import iconPassRecovery from '/src/Blue.png';
+import iconPassRecovery from '/public/Blue.png';
 import iconPassRecoveryRed from '@public/Red.png';
 import { useConfirmEmailMutation } from '@redux/api/session/apiSession';
 import { SessionConfirmEmail } from '@redux/api/session/types';

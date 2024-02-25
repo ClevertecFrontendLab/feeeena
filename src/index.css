@@ -8,7 +8,7 @@
 @import "@components/loader/loader.css";
 @import "@components/configFile/blure/blure.css";
 
-@import "@components/passRecovery/PassRecovery.css";
+@import "@components/passRecovery/passRecovery.css";
 :root {
     min-height: 100vh;
     font-family: "Inter", sans-serif;
