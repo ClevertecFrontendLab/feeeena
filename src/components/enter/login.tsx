@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Form, Input, Button, Checkbox } from 'antd';
 import { GooglePlusOutlined } from '@ant-design/icons';
-import '@components/enter/login.css';
-import { EnterText } from '../configFile/enterText';
 
+import { EnterText } from '../configFile/enterText';
+import '@components/enter/login.css';
 import { regExp } from '@constants/regExp';
 import { useCheckEmailMutation, useLoginMutation } from '@redux/api/session/apiSession';
 import { RequestLogin } from '@redux/api/session/types';

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import LayoutEnter from '@constants/layoutEnter/layoutEnter';
-import './PassRecovery.css';
+
 import RecoveryCont from '@constants/recovery/recoveryCont';
 import clsn from 'classnames';
 
