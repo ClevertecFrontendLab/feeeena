@@ -12,6 +12,7 @@ import { sessionActions } from '@store/slice/session';
 
 import { responseResultLogin } from './responseResultLogin';
 import { responseResultCheckEmail } from './responseCheckEmail';
+import { setSessionStorage } from '@constants/storageUtils';
 
 export const Login = () => {
     const [form] = Form.useForm();
@@ -27,7 +28,7 @@ export const Login = () => {
             const result = await checkEmail();
 
             if (result.email) {
-                sessionStorage.setItem('email', result.email);
+                setSessionStorage('email', result.email);
                 dispatch(sessionActions.setIsLoading(true));
 
                 const responseResult = await checkEmailForgot(result);

@@ -12,7 +12,7 @@ import { authPath } from '@components/configFile/authPath.tsx';
 import { useChangePasswordMutation } from '@redux/api/session/apiSession';
 
 import { responseResultChangePassword } from '@components/passRecovery/passRecForm/responseResultChangePassword';
-
+import { getSessionStorage } from '@constants/storageUtils';
 export const ErrorChangePass: React.FC = () => {
     const dispatch = useAppDispatch();
 
@@ -20,8 +20,8 @@ export const ErrorChangePass: React.FC = () => {
     const onClickErrorChangePassword = () => {
         dispatch(push(authPath.NEW_PASS), { forgot: 'step_two' });
 
-        const password = sessionStorage.getItem('password') || '';
-        const confirmPassword = sessionStorage.getItem('confirmPassword') || '';
+        const password = getSessionStorage('password');
+        const confirmPassword = getSessionStorage('confirmPassword');
 
         changePassword({ password, confirmPassword }).then((result) => {
             responseResultChangePassword(result, dispatch);

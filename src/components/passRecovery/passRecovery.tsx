@@ -15,9 +15,11 @@ import { FetchBaseQueryError } from '@reduxjs/toolkit/query';
 import { SerializedError } from '@reduxjs/toolkit';
 import { useAppDispatch } from '@hooks/typed-react-redux-hooks';
 import { push } from 'redux-first-history';
+import { getSessionStorage } from '@constants/storageUtils';
 
 export const PassRecovery: React.FC = () => {
-    const email = sessionStorage.getItem('email');
+    const email = getSessionStorage('email');
+
     const dispatch = useAppDispatch();
     const [confirmEmail] = useConfirmEmailMutation();
 

@@ -11,7 +11,7 @@ import './errorSaveData.css';
 import { Button, Result } from 'antd';
 import { useRegisterMutation } from '@redux/api/session/apiSession';
 import { sessionActions } from '@store/slice/session';
-
+import { getSessionStorage } from '@constants/storageUtils';
 import { responseResultRegister } from '@components/enter/responseResultRegister';
 
 export const ErrorSaveData: React.FC = () => {
@@ -22,8 +22,8 @@ export const ErrorSaveData: React.FC = () => {
         dispatch(push(authPath.REGISTER, { result: 'result' }));
         dispatch(sessionActions.setIsLoading(true));
 
-        const email = sessionStorage.getItem('email') || '';
-        const password = sessionStorage.getItem('password') || '';
+        const email = getSessionStorage('email');
+        const password = getSessionStorage('password');
 
         register({ email, password }).then((result) => {
             responseResultRegister(result, dispatch);

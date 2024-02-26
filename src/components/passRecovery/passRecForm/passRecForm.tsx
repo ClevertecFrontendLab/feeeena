@@ -12,7 +12,7 @@ import { useChangePasswordMutation } from '@redux/api/session/apiSession';
 import { regExp } from '@constants/regExp';
 import { sessionActions } from '@store/slice/session.ts';
 import { responseResultChangePassword } from './responseResultChangePassword';
-
+import { setSessionStorage } from '@constants/storageUtils';
 export const PassRecForm: React.FC = () => {
     const [form] = Form.useForm();
     const dispatch = useAppDispatch();
@@ -22,8 +22,8 @@ export const PassRecForm: React.FC = () => {
         dispatch(sessionActions.setIsLoading(true));
 
         changePassword({ password, confirmPassword }).then((result) => {
-            sessionStorage.setItem('password', password);
-            sessionStorage.setItem('confirmPassword', confirmPassword);
+            setSessionStorage('password', password);
+            setSessionStorage('confirmPassword', confirmPassword);
 
             responseResultChangePassword(result, dispatch);
         });

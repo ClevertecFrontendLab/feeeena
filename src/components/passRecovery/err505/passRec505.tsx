@@ -10,6 +10,7 @@ import { sessionActions } from '@store/slice/session';
 import { useCheckEmailMutation } from '@redux/api/session/apiSession';
 import { authPath } from '@components/configFile/authPath';
 import { responseResultCheckEmail } from '@components/enter/responseCheckEmail';
+import { getSessionStorage } from '@constants/storageUtils';
 
 export const PassRec505: React.FC = () => {
     const dispatch = useAppDispatch();
@@ -19,7 +20,7 @@ export const PassRec505: React.FC = () => {
         dispatch(push(authPath.LOGIN, { result: 'result' }));
         dispatch(sessionActions.setIsLoading(true));
 
-        const email = sessionStorage.getItem('email') || '';
+        const email = getSessionStorage('email');
 
         checkEmail({ email }).then((result) => {
             responseResultCheckEmail(result, dispatch);

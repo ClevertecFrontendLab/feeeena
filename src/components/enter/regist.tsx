@@ -11,7 +11,7 @@ import { useAppDispatch } from '@hooks/typed-react-redux-hooks';
 import { sessionActions } from '@store/slice/session';
 
 import { responseResultRegister } from './responseResultRegister';
-
+import { setSessionStorage } from '@constants/storageUtils';
 export const Registration = () => {
     const [isButtonDisabled, setButtonDisabled] = useState(false);
     const [form] = Form.useForm();
@@ -37,8 +37,8 @@ export const Registration = () => {
     const onFinish = ({ email, password }: RequestRegister) => {
         dispatch(sessionActions.setIsLoading(true));
         register({ email, password }).then((result) => {
-            sessionStorage.setItem('email', email);
-            sessionStorage.setItem('password', password);
+            setSessionStorage('email', email);
+            setSessionStorage('password', password);
 
             responseResultRegister(result, dispatch);
         });
