@@ -25,8 +25,8 @@
     background: var(--primary-light-blue);
 }
 
-.button-error {
-    width: 20% !important;
+.button-error-505 {
+    width: 20%;
 }
 @media screen and (max-width: 360px) {
     .err_505_cont {
@@ -34,7 +34,7 @@
         height: auto;
         padding: 32px !important;
     }
-    .button-error {
-        width: 40% !important;
+    .button-error-505 {
+        width: 40%;
     }
 }

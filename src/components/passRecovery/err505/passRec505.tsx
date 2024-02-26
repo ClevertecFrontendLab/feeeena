@@ -41,7 +41,7 @@ export const PassRec505: React.FC = () => {
                                 size='large'
                                 type='primary'
                                 key='console'
-                                className='button-error'
+                                className='button-error-505'
                                 onClick={onClickErrorCheckEmail}
                                 data-test-id='check-back-button'
                             >
