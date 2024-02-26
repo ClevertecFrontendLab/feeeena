@@ -9,14 +9,14 @@
     width: 100%;
 }
 .ant-result-title {
-    font-family: "Inter", sans-serif;
-    font-weight: 500;
-    line-height: 1;
+    font-family: var(--fontInter);
+    font-weight: var(--font500);
+    line-height: var(--line1);
     margin-bottom: 10px;
 }
 .ant-result-subtitle {
     color: var(--gray);
-    line-height: 1;
+    line-height: var(--line1);
 }
 @media screen and (max-width: 360px) {
     .error {

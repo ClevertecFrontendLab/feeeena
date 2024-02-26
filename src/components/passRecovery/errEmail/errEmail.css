@@ -1,5 +1,5 @@
 .err_Email {
-    border-radius: 2px;
+    border-radius: var(--br2);
     padding: 64px 32px 56px 32px;
     width: 539px;
     height: 355px;
@@ -22,18 +22,17 @@
     width: 40%;
 }
 .ant-result-title {
-    font-family: "Inter", sans-serif;
-    font-weight: 500;
-    line-height: 1 !important;
+    font-family: var(--fontInter);
+    font-weight: var(--font500);
+    line-height: var(--line1) !important;
     margin-bottom: 10px;
 }
 .ant-result-subtitle {
     color: var(--gray);
-    line-height: 1 !important;
+    line-height: var(--line1) !important;
 }
 @media screen and (max-width: 360px) {
     .err_Email {
-        border-radius: 2px;
         width: 328px;
         height: auto;
     }

@@ -6,6 +6,6 @@
     width: 539px;
     height: 686px;
     background-color: var(--white);
-    padding: 64px 32px;
-    border-radius: 2px;
+    padding: var(--pad64_32);
+    border-radius: var(--br2);
 }

@@ -1,5 +1,5 @@
 .recovery_cont {
-    border-radius: 2px;
+    border-radius: var(--br2);
     padding: 64px 32px 56px;
     width: 539px;
     height: 428px;

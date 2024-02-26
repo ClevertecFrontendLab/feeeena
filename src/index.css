@@ -13,12 +13,28 @@
     min-height: 100vh;
     font-family: "Inter", sans-serif !important;
 
+    /*color*/
     --primary-light-blue: #2f54eb;
     --white: white;
     --black: black;
     --gray: #8c8c8c;
     --grayBorder: #bfbfbf;
-    --fontInter: "Inter", sans-serif;
-    --fontSize: 16;
+    --red: red;
     --antd-wave-shadow-color: #2f54eb !important;
+
+    /*font*/
+    --fontInter: "Inter", sans-serif;
+    --font14: 14px;
+    --font16: 16px;
+    --font24: 24px;
+    --font400: 400;
+    --font500: 500;
+    --line130: 130%;
+    --line1: 1;
+
+    /*margins, paddings*/
+    --br2: 2px;
+    --mp32: 32px;
+    --pad64_32: 64px 32px;
+    --pad32_16: 32px 16px;
 }

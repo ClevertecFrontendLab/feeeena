@@ -1,5 +1,5 @@
 .err_505_cont {
-    border-radius: 2px;
+    border-radius: var(--br2);
     padding: 64px 32px 56px;
     width: 539px;
     height: 550px;
@@ -13,8 +13,8 @@
     justify-content: center;
 }
 .ant-result-title {
-    font-family: "Inter", sans-serif;
-    font-weight: 500;
+    font-family: var(--fontInter);
+    font-weight: var(--font500);
 }
 .ant-result-subtitle {
     color: var(--gray);
@@ -30,7 +30,6 @@
 }
 @media screen and (max-width: 360px) {
     .err_505_cont {
-        border-radius: 2px;
         width: 328px;
         height: auto;
         padding: 32px !important;

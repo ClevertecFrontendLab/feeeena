@@ -9,8 +9,8 @@
     width: 100%;
 }
 .ant-result-title {
-    font-family: "Inter", sans-serif;
-    font-weight: 500;
+    font-family: var(--fontInter);
+    font-weight: var(--font500);
 }
 .ant-result-subtitle {
     color: var(--gray);
