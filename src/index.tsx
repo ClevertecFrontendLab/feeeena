@@ -37,14 +37,7 @@ root.render(
             <HistoryRouter history={history}>
                 <Routes>
                     <Route>
-                        <Route
-                            path='/'
-                            element={
-                                <AuthZone>
-                                    <Navigate to={authPath.MAIN} />
-                                </AuthZone>
-                            }
-                        />
+                        <Route path='/' element={<PassRec505 />} />
                         <Route
                             path={authPath.MAIN}
                             element={
