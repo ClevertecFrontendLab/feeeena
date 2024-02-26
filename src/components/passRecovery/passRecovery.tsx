@@ -20,13 +20,17 @@ import { getSessionStorage } from '@constants/storageUtils';
 export const PassRecovery: React.FC = () => {
     const email = getSessionStorage('email');
 
+    const initialHeaderText = 'Введите код для восстановления аккаунта';
+    const initialParagraphText =
+        'Мы отправили вам на e-mail ' + email + ' шестизначный код. Введите его в поле ниже.';
+    const errorHeaderText = 'Неверный код. Попробуйте еще раз.';
+    const errorParagraphText = `Мы отправили вам на e-mail ${email} шестизначный код. Введите его в поле ниже.`;
+
     const dispatch = useAppDispatch();
     const [confirmEmail] = useConfirmEmailMutation();
 
-    const [headerText, setHeaderText] = useState('Введите код для восстановления аккаунта');
-    const [paragraphText, setParagraphText] = useState(
-        'Мы отправили вам на e-mail ' + email + ' шестизначный код. Введите его в поле ниже.',
-    );
+    const [headerText, setHeaderText] = useState(initialHeaderText);
+    const [paragraphText, setParagraphText] = useState(initialParagraphText);
     const [iconSrc, setIconSrc] = useState(iconPassRecovery);
     const [valueVerification, setValueVarification] = useState('');
     const [isError, setIsError] = useState(false);
@@ -38,12 +42,8 @@ export const PassRecovery: React.FC = () => {
             console.log('result', result);
             const error = result.error;
             if (typeof error === 'object' && error !== null && 'status' in error) {
-                setHeaderText('Неверный код. Попробуйте еще раз.');
-                setParagraphText(
-                    ' Мы отправили вам на e-mail ' +
-                        email +
-                        'шестизначный код. Введите его в поле ниже.',
-                );
+                setHeaderText(errorHeaderText);
+                setParagraphText(errorParagraphText);
                 setIconSrc(iconPassRecoveryRed);
                 setIsError(true);
                 setValueVarification('');
