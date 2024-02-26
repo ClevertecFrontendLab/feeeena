@@ -102,8 +102,8 @@
         height: 100vh;
     }
     .contForm {
-        border-radius: var(--br2);
-        padding: var(--pa64_32);
+        border-radius: 2px;
+        padding: 64px 32px;
         width: 539px;
         height: 742px;
     }
@@ -114,8 +114,8 @@
         height: 100vh;
     }
     .contForm {
-        border-radius: var(--br2);
-        padding: var(--pad32_16);
+        border-radius: 2px;
+        padding: 32px 16px;
         width: 328px;
         height: 564px;
     }
