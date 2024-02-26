@@ -28,7 +28,6 @@ export const sessionSlice = createSlice({
             state.isLoading = payload;
         },
         setAuthorized: (state: SessionSliceStateType, { payload }: PayloadAction<boolean>) => {
-            console.log("ssdf")
             state.isAuthorized = payload;
         },
     },
