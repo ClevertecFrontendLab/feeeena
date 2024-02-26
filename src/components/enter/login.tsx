@@ -29,12 +29,11 @@ export const Login = () => {
             if (result.email) {
                 sessionStorage.setItem('email', result.email);
                 dispatch(sessionActions.setIsLoading(true));
-                await checkEmailForgot(result).then((result) => {
-                    responseResultCheckEmail(result, dispatch);
-                });
+
+                const responseResult = await checkEmailForgot(result);
+                responseResultCheckEmail(responseResult, dispatch);
             }
         } catch (error) {
-            console.log('Check e-mail', error);
         } finally {
             dispatch(sessionActions.setIsLoading(false));
         }
@@ -48,7 +47,6 @@ export const Login = () => {
             return result;
         } catch (error) {
             setEmailValid(true);
-            console.log('Valitade e-mail', error);
         }
     };
 
@@ -79,7 +77,6 @@ export const Login = () => {
                         addonBefore='e-mail:'
                         size='large'
                         style={{
-                            borderColor: isEmailValid ? '#2f54eb' : 'red',
                             color: '#2f54eb',
                             maxWidth: '100%',
                             height: '40px',
@@ -130,7 +127,7 @@ export const Login = () => {
                         size='large'
                         style={{
                             marginBottom: '16px',
-                            background: '#2F54EB',
+                            background: 'var(--primary-light-blue)',
                         }}
                         data-test-id='login-submit-button'
                     >
