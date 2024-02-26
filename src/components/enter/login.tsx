@@ -13,7 +13,7 @@ import { sessionActions } from '@store/slice/session';
 import { responseResultLogin } from './responseResultLogin';
 import { responseResultCheckEmail } from './responseCheckEmail';
 
-const Login = () => {
+export const Login = () => {
     const [form] = Form.useForm();
     const dispatch = useAppDispatch();
 
@@ -154,5 +154,3 @@ const Login = () => {
         </Form>
     );
 };
-
-export default Login;

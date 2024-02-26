@@ -1,17 +1,17 @@
 import React from 'react';
 import { Button, Result } from 'antd';
-import LayoutEnter from '@constants/layoutEnter/layoutEnter';
+import { LayoutEnter } from '@constants/layoutEnter/layoutEnter';
 
 import './passRec505.css';
 
-import './passRec505.css';
 import { useAppDispatch } from '@hooks/typed-react-redux-hooks';
 import { push } from 'redux-first-history';
 import { sessionActions } from '@store/slice/session';
 import { useCheckEmailMutation } from '@redux/api/session/apiSession';
 import { authPath } from '@components/configFile/authPath';
 import { responseResultCheckEmail } from '@components/enter/responseCheckEmail';
-const PassRec505: React.FC = () => {
+
+export const PassRec505: React.FC = () => {
     const dispatch = useAppDispatch();
     const [checkEmail] = useCheckEmailMutation();
 
@@ -53,5 +53,3 @@ const PassRec505: React.FC = () => {
         </LayoutEnter>
     );
 };
-
-export default PassRec505;

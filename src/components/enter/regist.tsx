@@ -12,26 +12,6 @@ import { sessionActions } from '@store/slice/session';
 
 import { responseResultRegister } from './responseResultRegister';
 
-// interface FormValues {
-//     email: string;
-//     password: string;
-//     confirmPassword: string;
-// }
-
-// const validateEmail = (_: any, value: string) => {
-//     if (!value || value.endsWith('.com') || value.endsWith('.ru')) {
-//         return Promise.resolve();
-//     }
-//     return Promise.reject('');
-// };
-
-// const validatePassword = (_: any, value: string) => {
-//     if (value.length >= 8 && /^(?=.*[A-Z])(?=.*\d)/.test(value)) {
-//         return Promise.resolve();
-//     }
-//     return Promise.reject('');
-// };
-
 export const Registration = () => {
     const [isButtonDisabled, setButtonDisabled] = useState(false);
     const [form] = Form.useForm();
@@ -64,18 +44,6 @@ export const Registration = () => {
         });
     };
 
-    // const onFinish = (values: FormValues) => {
-    //     console.log('Отправленные данные:', values);
-    //     const { email, password, confirmPassword } = values;
-    //     if (!email || !password || !confirmPassword || password !== confirmPassword) {
-    //         setFormValid(false);
-    //         setButtonDisabled(true);
-    //         return;
-    //     }
-    //     setFormValid(true);
-    //     setButtonDisabled(false);
-    // };
-
     return (
         <Form
             className='regist_form'
@@ -90,10 +58,8 @@ export const Registration = () => {
                     name='email'
                     rules={[{ required: true }, { pattern: regExp.email, message: '' }]}
                     help={''}
-                    
                 >
-                    <Input addonBefore='e-mail:' size='large' data-test-id='registration-email'
-/>
+                    <Input addonBefore='e-mail:' size='large' data-test-id='registration-email' />
                 </Form.Item>
 
                 <Form.Item
@@ -120,8 +86,11 @@ export const Registration = () => {
                         </div>
                     }
                 >
-                    <Input.Password size='large' placeholder={EnterText.PASS_I}  data-test-id='registration-password'
-/>
+                    <Input.Password
+                        size='large'
+                        placeholder={EnterText.PASS_I}
+                        data-test-id='registration-password'
+                    />
                 </Form.Item>
 
                 <Form.Item
@@ -140,8 +109,11 @@ export const Registration = () => {
                         }),
                     ]}
                 >
-                    <Input.Password size='large' placeholder={EnterText.PASS_RE} data-test-id='registration-confirm-password'
-/>
+                    <Input.Password
+                        size='large'
+                        placeholder={EnterText.PASS_RE}
+                        data-test-id='registration-confirm-password'
+                    />
                 </Form.Item>
             </div>
 
@@ -153,7 +125,6 @@ export const Registration = () => {
                     className='login-form-button button-submit '
                     disabled={isButtonDisabled}
                     data-test-id='registration-submit-button'
-
                 >
                     {EnterText.ENTER}
                 </Button>
@@ -173,5 +144,3 @@ export const Registration = () => {
         </Form>
     );
 };
-
-// export default Registration;

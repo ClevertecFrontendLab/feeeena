@@ -1,15 +1,16 @@
 import React from 'react';
 
-import LayoutEnter from '@constants/layoutEnter/layoutEnter';
-import ErrCont from '@constants/errorss/errCont/errCont.tsx';
-import ErrorInner from '@constants/errorss/errInner/errorInner.tsx';
+import { LayoutEnter } from '@constants/layoutEnter/layoutEnter';
+import { ErrCont } from '@constants/errorss/errCont/errCont.tsx';
+import { ErrorInner } from '@constants/errorss/errInner/errorInner.tsx';
+
 import './succesChangePass.css';
 import { Button, Result } from 'antd';
 import { useAppDispatch } from '@hooks/typed-react-redux-hooks';
 import { push } from 'redux-first-history';
 import { authPath } from '@components/configFile/authPath.tsx';
 
-const SuccesChangePass: React.FC = () => {
+export const SuccesChangePass: React.FC = () => {
     const dispatch = useAppDispatch();
 
     const onClickSuccessChangePassword = () => {
@@ -42,5 +43,3 @@ const SuccesChangePass: React.FC = () => {
         </LayoutEnter>
     );
 };
-
-export default SuccesChangePass;

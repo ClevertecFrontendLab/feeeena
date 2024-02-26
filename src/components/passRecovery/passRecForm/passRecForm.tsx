@@ -1,7 +1,8 @@
 import React from 'react';
 import { Input, Form, Button } from 'antd';
 
-import LayoutEnter from '@constants/layoutEnter/layoutEnter';
+import { LayoutEnter } from '@constants/layoutEnter/layoutEnter';
+
 import '@components/passRecovery/passRecForm/passRecForm.css';
 import { EnterText } from '../../configFile/enterText';
 import { useAppDispatch } from '@hooks/typed-react-redux-hooks';
@@ -12,7 +13,7 @@ import { regExp } from '@constants/regExp';
 import { sessionActions } from '@store/slice/session.ts';
 import { responseResultChangePassword } from './responseResultChangePassword';
 
-const PassRecForm: React.FC = () => {
+export const PassRecForm: React.FC = () => {
     const [form] = Form.useForm();
     const dispatch = useAppDispatch();
     const [changePassword] = useChangePasswordMutation();
@@ -117,5 +118,3 @@ const PassRecForm: React.FC = () => {
         </LayoutEnter>
     );
 };
-
-export default PassRecForm;

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import LayoutEnter from '@constants/layoutEnter/layoutEnter';
-import ErrCont from '@constants/errorss/errCont/errCont.tsx';
-import ErrorInner from '@constants/errorss/errInner/errorInner.tsx';
+import { LayoutEnter } from '@constants/layoutEnter/layoutEnter';
+import { ErrCont } from '@constants/errorss/errCont/errCont.tsx';
+import { ErrorInner } from '@constants/errorss/errInner/errorInner.tsx';
 
 import './errorLogin.css';
 import { Button, Result } from 'antd';
@@ -10,7 +10,7 @@ import { useAppDispatch } from '@hooks/typed-react-redux-hooks';
 import { push } from 'redux-first-history';
 import { authPath } from '@components/configFile/authPath.tsx';
 
-const ErrorLogin: React.FC = () => {
+export const ErrorLogin: React.FC = () => {
     const dispatch = useAppDispatch();
 
     const onClickErrorLogin = () => {
@@ -43,5 +43,3 @@ const ErrorLogin: React.FC = () => {
         </LayoutEnter>
     );
 };
-
-export default ErrorLogin;

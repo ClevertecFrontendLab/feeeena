@@ -11,7 +11,7 @@
 @import "@components/passRecovery/passRecovery.css";
 :root {
     min-height: 100vh;
-    font-family: "Inter", sans-serif;
+    font-family: "Inter", sans-serif !important;
 
     --primary-light-blue: #2f54eb;
     --white: white;

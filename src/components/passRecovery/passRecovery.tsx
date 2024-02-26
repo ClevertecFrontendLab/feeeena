@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import LayoutEnter from '@constants/layoutEnter/layoutEnter';
+import { LayoutEnter } from '@constants/layoutEnter/layoutEnter';
 
-import RecoveryCont from '@constants/recovery/recoveryCont';
+import { RecoveryCont } from '@constants/recovery/recoveryCont';
 import clsn from 'classnames';
 
 import { authPath } from '@components/configFile/authPath';
@@ -16,7 +16,7 @@ import { SerializedError } from '@reduxjs/toolkit';
 import { useAppDispatch } from '@hooks/typed-react-redux-hooks';
 import { push } from 'redux-first-history';
 
-const PassRecovery: React.FC = () => {
+export const PassRecovery: React.FC = () => {
     const email = sessionStorage.getItem('email');
     const dispatch = useAppDispatch();
     const [confirmEmail] = useConfirmEmailMutation();
@@ -105,5 +105,3 @@ const PassRecovery: React.FC = () => {
         </LayoutEnter>
     );
 };
-
-export default PassRecovery;

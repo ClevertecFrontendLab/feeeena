@@ -1,8 +1,9 @@
 import React from 'react';
 
-import LayoutEnter from '@constants/layoutEnter/layoutEnter';
-import ErrCont from '@constants/errorss/errCont/errCont.tsx';
-import ErrorInner from '@constants/errorss/errInner/errorInner.tsx';
+import { LayoutEnter } from '@constants/layoutEnter/layoutEnter';
+import { ErrCont } from '@constants/errorss/errCont/errCont.tsx';
+import { ErrorInner } from '@constants/errorss/errInner/errorInner.tsx';
+
 import { useAppDispatch } from '@hooks/typed-react-redux-hooks';
 import { push } from 'redux-first-history';
 import { authPath } from '@components/configFile/authPath.tsx';
@@ -13,7 +14,7 @@ import { sessionActions } from '@store/slice/session';
 
 import { responseResultRegister } from '@components/enter/responseResultRegister';
 
-const ErrorSaveData: React.FC = () => {
+export const ErrorSaveData: React.FC = () => {
     const dispatch = useAppDispatch();
     const [register] = useRegisterMutation();
 
@@ -56,5 +57,3 @@ const ErrorSaveData: React.FC = () => {
         </LayoutEnter>
     );
 };
-
-export default ErrorSaveData;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Result } from 'antd';
-import LayoutEnter from '@constants/layoutEnter/layoutEnter';
+import { LayoutEnter } from '@constants/layoutEnter/layoutEnter';
 
 import './errEmail.css';
 
@@ -8,7 +8,7 @@ import { useAppDispatch } from '@hooks/typed-react-redux-hooks';
 import { push } from 'redux-first-history';
 import { authPath } from '@components/configFile/authPath';
 
-const ErrEmail: React.FC = () => {
+export const ErrEmail: React.FC = () => {
     const dispatch = useAppDispatch();
     const onClickErrorCheckEmailNOExist = () => {
         dispatch(push(authPath.LOGIN, { result: 'result' }));
@@ -40,5 +40,3 @@ const ErrEmail: React.FC = () => {
         </LayoutEnter>
     );
 };
-
-export default ErrEmail;

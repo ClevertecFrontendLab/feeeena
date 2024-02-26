@@ -1,4 +1,4 @@
-import Blure from '@components/configFile/blure/blure';
+import { Blure } from '@components/configFile/blure/blure';
 import loader from './loader.json';
 import Lottie from 'lottie-react';
 import { useAppSelector } from '@hooks/typed-react-redux-hooks';
@@ -9,8 +9,13 @@ export function Loader() {
     return (
         <>
             {isLoading ? (
-                <Blure >
-                    <Lottie animationData={loader} loop={true} className='spinner' data-test-id='loader' />
+                <Blure>
+                    <Lottie
+                        animationData={loader}
+                        loop={true}
+                        className='spinner'
+                        data-test-id='loader'
+                    />
                 </Blure>
             ) : null}
         </>

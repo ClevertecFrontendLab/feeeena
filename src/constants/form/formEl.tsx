@@ -5,8 +5,6 @@ interface FormElProps {
     children: React.ReactNode;
 }
 
-const FormEl: React.FC<FormElProps> = ({ children }) => {
-    return <div className='form'>{children}</div>;
-};
-
-export default FormEl;
+export const FormEl: React.FC<FormElProps> = ({ children }) => (
+    <div className='form'>{children}</div>
+);

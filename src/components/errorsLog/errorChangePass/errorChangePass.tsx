@@ -1,8 +1,8 @@
 import React from 'react';
 
-import LayoutEnter from '@constants/layoutEnter/layoutEnter';
-import ErrCont from '@constants/errorss/errCont/errCont.tsx';
-import ErrorInner from '@constants/errorss/errInner/errorInner.tsx';
+import { LayoutEnter } from '@constants/layoutEnter/layoutEnter';
+import { ErrCont } from '@constants/errorss/errCont/errCont.tsx';
+import { ErrorInner } from '@constants/errorss/errInner/errorInner.tsx';
 
 import './errorChangePass.css';
 import { Button, Result } from 'antd';
@@ -13,7 +13,7 @@ import { useChangePasswordMutation } from '@redux/api/session/apiSession';
 
 import { responseResultChangePassword } from '@components/passRecovery/passRecForm/responseResultChangePassword';
 
-const ErrorChangePass: React.FC = () => {
+export const ErrorChangePass: React.FC = () => {
     const dispatch = useAppDispatch();
 
     const [changePassword] = useChangePasswordMutation();
@@ -54,5 +54,3 @@ const ErrorChangePass: React.FC = () => {
         </LayoutEnter>
     );
 };
-
-export default ErrorChangePass;
