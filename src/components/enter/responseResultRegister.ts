@@ -5,26 +5,23 @@ import { FetchBaseQueryError } from '@reduxjs/toolkit/query';
 import { sessionActions } from '@store/slice/session';
 import { AppDispatch } from '@store/store';
 import { push } from 'redux-first-history';
+import { isApiError } from '@components/enter/SpecificError.ts';
 
 export const responseResultRegister = (
     result: { data: SessionRegister } | { error: FetchBaseQueryError | SerializedError },
     dispatch: AppDispatch,
 ) => {
-    if ('error' in result) {
+    if ('error' in result && isApiError(result.error)) {
         const error = result.error;
 
-        if (typeof error === 'object' && error !== null && 'status' in error) {
-            if (error.status === 409) {
-                dispatch(push(authPath.SAVE_DATA_ERROR_EMAIL, { result: 'result' }));
-                dispatch(sessionActions.setIsLoading(false));
-                return;
-            }
-
+        if (error.status === 409) {
+            dispatch(push(authPath.SAVE_DATA_ERROR_EMAIL, { result: 'result' }));
+        } else {
             dispatch(push(authPath.SAVE_DATA_ERROR, { result: 'result' }));
-            dispatch(sessionActions.setIsLoading(false));
-            return;
-            
         }
+
+        dispatch(sessionActions.setIsLoading(false));
+        return;
     }
 
     sessionStorage.removeItem('email');

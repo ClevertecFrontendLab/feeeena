@@ -5,19 +5,16 @@ import { SerializedError } from '@reduxjs/toolkit';
 import { FetchBaseQueryError } from '@reduxjs/toolkit/query';
 import { sessionActions } from '@store/slice/session';
 import { AppDispatch } from '@store/store';
-
 import { push } from 'redux-first-history';
+import { isApiError } from '@components/enter/SpecificError.ts';
 
 export const responseResultLogin = (
     result: { data: SessionLogin } | { error: FetchBaseQueryError | SerializedError },
     remember: boolean | undefined,
     dispatch: AppDispatch,
 ) => {
-    if ('error' in result) {
-        const error = result.error;
-        if (typeof error === 'object' && error !== null && 'status' in error) {
-            dispatch(push(authPath.LOGIN_ERROR, { result: 'result' }));
-        }
+    if ('error' in result && isApiError(result.error)) {
+        dispatch(push(authPath.LOGIN_ERROR, { result: 'result' }));
         dispatch(sessionActions.setIsLoading(false));
         return;
     }
