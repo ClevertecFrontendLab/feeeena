@@ -1,0 +1,15 @@
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 368px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 360px) {
+    .error {
+        width: 296px;
+        margin: 0 auto;
+    }
+}

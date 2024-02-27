@@ -1,0 +1,11 @@
+.contForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 539px;
+    height: 686px;
+    background-color: var(--white);
+    padding: var(--pad64_32);
+    border-radius: var(--br2);
+}

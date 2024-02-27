@@ -1,0 +1,41 @@
+.recovery_content_form {
+    border-radius: var(--br2);
+    padding: var(--pad64_32);
+    width: 539px;
+    height: 419px;
+    background-color: var(--white);
+}
+.recovery_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 53px;
+    padding-right: 53px;
+}
+
+.title_rec {
+    font-family: var(--fontInter);
+    font-weight: var(--font500);
+    text-align: center;
+    font-size: var(--font14);
+    line-height: 200%;
+    margin-bottom: var(--mp32);
+}
+.password {
+    margin-bottom: 48px;
+}
+.confirmPassword {
+    margin-bottom: var(--mp32);
+}
+@media screen and (max-width: 360px) {
+    .recovery_content_form {
+        padding: var(--pad32_16);
+        width: 328px;
+        height: 386px;
+        background-color: var(--white);
+    }
+    .recovery_form {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

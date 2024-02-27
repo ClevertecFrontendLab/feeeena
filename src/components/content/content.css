@@ -35,7 +35,7 @@
 }
 
 .actions-container li {
-    font-family: "Inter", sans-serif;
+    font-family: var(--fontInter);
     color: #061178;
     line-height: 130%;
     font-weight: 500;

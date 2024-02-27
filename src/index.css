@@ -1,10 +1,43 @@
 @import "antd/dist/antd.css";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto:ital@1&display=swap");
 @import "@components/sider/Sider.css";
 @import "@components/footer/footer.css";
 @import "@components/header/header.css";
 @import "@components/content/content.css";
 @import "@pages/main-page/mainPage.css";
+@import "@components/enter/login.css";
+@import "@components/loader/loader.css";
+@import "@components/configFile/blure/blure.css";
 
+@import "@components/passRecovery/passRecovery.css";
+body {
+    font-family: "Inter", sans-serif;
+}
 :root {
     min-height: 100vh;
+
+    /* color */
+    --primary-light-blue: #2f54eb;
+    --white: white;
+    --black: black;
+    --gray: #8c8c8c;
+    --grayBorder: #bfbfbf;
+    --red: red;
+    --antd-wave-shadow-color: #2f54eb !important;
+
+    /* font */
+    --fontInter: "Inter", sans-serif;
+    --font14: 14px;
+    --font16: 16px;
+    --font24: 24px;
+    --font400: 400;
+    --font500: 500;
+    --line130: 130%;
+    --line1: 1;
+
+    /* margins, paddings */
+    --br2: 2px;
+    --mp32: 32px;
+    --pad64_32: 64px 32px;
+    --pad32_16: 32px 16px;
 }

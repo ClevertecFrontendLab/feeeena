@@ -1,0 +1,12 @@
+.layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1440px;
+    height: 100vh;
+    margin: 0 auto;
+    background-image: url("/Enter_page_light_blur.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

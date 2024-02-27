@@ -1,0 +1,15 @@
+.err_cont {
+    border-radius: var(--br2);
+    padding: var(--pad64_32);
+    width: 539px;
+    height: 345px;
+    background-color: var(--white);
+}
+
+@media screen and (max-width: 360px) {
+    .err_cont {
+        padding: var(--pad32_16);
+        width: 328px;
+        height: auto;
+    }
+}

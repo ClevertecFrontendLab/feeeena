@@ -1,0 +1,25 @@
+.ant-result {
+    padding: 0;
+}
+.ant-btn-primary {
+    border-color: var(--primary-light-blue);
+    background: var(--primary-light-blue);
+}
+.button-error {
+    width: 100%;
+}
+.ant-result-title {
+    font-family: var(--fontInter);
+    font-weight: var(--font500);
+}
+.ant-result-subtitle {
+    color: var(--gray);
+}
+@media screen and (max-width: 360px) {
+    .err_cont {
+        border-radius: var(--br2);
+        padding: var(--pad32_16);
+        width: 328px;
+        height: 317px;
+    }
+}
